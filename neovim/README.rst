@@ -6,7 +6,7 @@ neovim configration
 config file location
 ~~~~~~~~~~~~~~~~~~~~~~
 
-- PATH of `` init.vim `` and `` dein ``
+- PATH of ``init.vim`` and ``dein``
 
 .. code:: bash
 
