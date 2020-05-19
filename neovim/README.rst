@@ -6,11 +6,12 @@ neovim configration
 config file location
 ~~~~~~~~~~~~~~~~~~~~~~
 
-code-block:: Bash
-    # tree .config -a -P "*vim*" --prune
-    ~/.config         
-    └── nvim        
-        └── init.vim
+.. code:: bash
+
+   tree ~/.config -a -P "*vim*" --prune
+   # ~/.config
+   # └── nvim
+   #     └── init.vim
 
 
 
