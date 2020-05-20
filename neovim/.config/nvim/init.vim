@@ -21,6 +21,8 @@ set shiftwidth=4
 
 set splitright
 
+set diffopt+=vertical
+
 
 "dein Scripts-----------------------------
 if &compatible
