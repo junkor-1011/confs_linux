@@ -26,6 +26,18 @@ config file location
 Useful Links
 ~~~~~~~~~~~~~~
 
+- Recommends
+    - https://liginc.co.jp/469142
+    - https://qiita.com/karasu78/items/d1489f7cff0c2e0be890
+    - https://www.slideshare.net/ShunIwase/vim-141450302
+    - https://www.air-h.jp/articles/emopro/%E3%80%90vim%E3%80%91neovim%E3%81%AE%E3%81%99%E3%81%99%E3%82%81/
+    - https://note.com/nanigashi/n/n5f7ec9608e76
+    - https://knowledge.sakura.ad.jp/23248/
+    - https://career.levtech.jp/guide/knowhow/article/29/
+    - https://tech.libinc.co.jp/entry/2019/11/29/135510
+    - https://qiita.com/reireias/items/5364dcaada1a5b88a206
+    - https://qiita.com/reireias/items/beaa3bb0e299ae934217
+
 - General
     - https://qiita.com/tamago3keran/items/cdfd66b627b3686846d2
     - https://qiita.com/tetsuya/items/75987487ffac42250d3b
@@ -44,4 +56,8 @@ Useful Links
     - https://castleobj.com/defx/
     - https://takkii.hatenablog.com/entry/2018/08/19/133847
     - https://jsapachehtml.hatenablog.com/entry/2019/08/11/184952
+
+- ``fzf`` , ``grep``
+    - http://someneat.hatenablog.jp/entry/2017/03/12/011335
+
     
