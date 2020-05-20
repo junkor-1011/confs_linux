@@ -69,3 +69,6 @@ repo = 'itchyny/lightline.vim'
 [[plugins]]
 repo = 'alvan/vim-closetag'
 
+[[plugins]]
+repo = 'sheerun/vim-polyglot'
+
