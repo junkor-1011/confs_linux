@@ -60,4 +60,15 @@ Useful Links
 - ``fzf`` , ``grep``
     - http://someneat.hatenablog.jp/entry/2017/03/12/011335
 
+-------------
+
+
+CheatSheet
+~~~~~~~~~~~~
+
+- https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb
+- https://tech.libinc.co.jp/entry/2019/08/02/140439
+- https://qiita.com/fasahina/items/2767891134028648f288
+- https://qiita.com/jnchito/items/57ffda5712636a9a1e62
+
     
