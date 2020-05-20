@@ -1,7 +1,7 @@
 " ~/.config/nvim/init.vim
 
 " BASIC CONF
-colorscheme koehler
+"colorscheme koehler
 set number  " line number
 "set clipboard=unnamed
 

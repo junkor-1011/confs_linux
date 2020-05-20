@@ -4,29 +4,28 @@ repo = 'Shougo/dein.vim'
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
-" Define mappings
-autocmd FileType denite call s:denite_my_settings()
-function! s:denite_my_settings() abort
-  nnoremap <silent><buffer><expr> <CR>
-  \ denite#do_map('do_action')
-  nnoremap <silent><buffer><expr> d
-  \ denite#do_map('do_action', 'delete')
-  nnoremap <silent><buffer><expr> p
-  \ denite#do_map('do_action', 'preview')
-  nnoremap <silent><buffer><expr> q
-  \ denite#do_map('quit')
-  nnoremap <silent><buffer><expr> i
-  \ denite#do_map('open_filter_buffer')
-  nnoremap <silent><buffer><expr> <Space>
-  \ denite#do_map('toggle_select').'j'
-endfunction
+source ~/.config/nvim/plugins_dein/denite.vim
 '''
+
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --bin'
+#build_on = '''
+#./install -all
+#'''
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = 'fzf'
 
 [[plugins]]
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
 repo = 'Shougo/defx.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/defx.vim
+'''
 
 [[plugins]]
 repo = 'preservim/nerdtree'
@@ -40,6 +39,18 @@ repo = 'airblade/vim-gitgutter'
 [[plugins]]
 repo = 'tpope/vim-fugitive'
 
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/anzu.vim
+'''
+
 # Syntax checker
 [[plugins]]
 repo = 'w0rp/ale'
@@ -47,4 +58,14 @@ repo = 'w0rp/ale'
 # statusline plugin
 [[plugins]]
 repo = 'itchyny/lightline.vim'
+
+## colorscheme
+#[[plugins]]
+#repo = 'joshdick/onedark.vim'
+#hook_add = '''
+#colorscheme onedark
+#'''
+
+[[plugins]]
+repo = 'alvan/vim-closetag'
 
