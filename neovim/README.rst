@@ -37,6 +37,8 @@ Useful Links
     - https://tech.libinc.co.jp/entry/2019/11/29/135510
     - https://qiita.com/reireias/items/5364dcaada1a5b88a206
     - https://qiita.com/reireias/items/beaa3bb0e299ae934217
+    - https://qiita.com/ryutah/items/8a4acdb01ad15ebe99f2
+    - https://qiita.com/kooooooooooooooooohe/items/fb106e0a0f0969b4ee38
 
 - General
     - https://qiita.com/tamago3keran/items/cdfd66b627b3686846d2
@@ -49,6 +51,10 @@ Useful Links
     - https://liginc.co.jp/409849
     - https://wonderwall.hatenablog.com/entry/2019/07/30/233000
 
+- ``dein``
+    - https://qiita.com/delphinus/items/00ff2c0ba972c6e41542
+    - https://qiita.com/delphinus/items/cd221a450fd23506e81a
+
 - ``defx``
     - https://qiita.com/arks22/items/9688ec7f4cb43444e9d9
     - https://qiita.com/hisawa/items/aeb0f0400079fdaebc8b
@@ -59,6 +65,15 @@ Useful Links
 
 - ``fzf`` , ``grep``
     - http://someneat.hatenablog.jp/entry/2017/03/12/011335
+
+- ``vim-airline``
+    - https://original-game.com/vim-airline/
+    - https://qiita.com/park-jh/items/557a9d5b470947aef2f5
+    - https://qiita.com/myouga/items/2f241731c16cf09273ff
+    - https://dev.classmethod.jp/articles/vim-ricty-for-powerline/
+    - https://shotat.hateblo.jp/entry/2016/09/13/014358
+    - http://saihoooooooo.hatenablog.com/entry/2013/09/14/013840
+    - https://itchyny.hatenablog.com/entry/20130820/1376978742
 
 -------------
 
