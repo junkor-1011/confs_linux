@@ -61,9 +61,14 @@ repo = 'w0rp/ale'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
+depends = ['vim-airline-themes']
 hook_add = '''
 source ~/.config/nvim/plugins_dein/vim-airline.vim
+"let g:airline_theme = 'molokai'
 '''
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
 
 ## colorscheme
 #[[plugins]]
