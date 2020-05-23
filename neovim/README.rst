@@ -81,9 +81,16 @@ Useful Links
 CheatSheet
 ~~~~~~~~~~~~
 
+- https://vim-jp.org/vimdoc-ja/usr_01.html
+    - ``vim`` 本家
+- https://neovim.io/doc/user/
+    - ``neovim`` 本家
 - https://qiita.com/nyantera/items/4bf29ca6f11bc797a9cb
 - https://tech.libinc.co.jp/entry/2019/08/02/140439
 - https://qiita.com/fasahina/items/2767891134028648f288
 - https://qiita.com/jnchito/items/57ffda5712636a9a1e62
-
-    
+- https://qiita.com/takeharu/items/9d1c3577f8868f7b07b5
+- https://qiita.com/tpywao/items/bd119f0075e40d47c88b
+- https://qiita.com/iwaseasahi/items/f536bb3772d2fad5e03c
+- https://qiita.com/tsumac/items/3972d5347a5f6e37ca09 
+- https://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
