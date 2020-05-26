@@ -23,6 +23,7 @@ set splitright
 
 set diffopt+=vertical
 
+let mapleader = "\<Space>"
 
 "dein Scripts-----------------------------
 if &compatible
