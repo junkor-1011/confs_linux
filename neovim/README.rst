@@ -23,10 +23,26 @@ config file location
 
 
 
+In Trouble
+~~~~~~~~~~~~
+
+
+when installing ``denite`` , ``deoplete``, ``msgpack`` error occur
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+- ``:check health`` , then ``Error: Require msgpack 1.0.0+ was not succellful``
+    - https://github.com/Shougo/deoplete.nvim/issues/1077
+
+.. code:: bash
+
+   # for fix errors:
+   pip3 install --user pynvim --upgrade msgpack
+
+
 Useful Links
 ~~~~~~~~~~~~~~
 
-- Recommends
+- Recommends Plugins
     - https://liginc.co.jp/469142
     - https://qiita.com/karasu78/items/d1489f7cff0c2e0be890
     - https://www.slideshare.net/ShunIwase/vim-141450302
@@ -41,6 +57,9 @@ Useful Links
     - https://qiita.com/kooooooooooooooooohe/items/fb106e0a0f0969b4ee38
 
 - General
+    - https://postd.cc/vim3/
+    - https://postd.cc/how-to-boost-your-vim-productivity/
+    - https://nanasi.jp/articles/vim/cmdex_vim.html
     - https://qiita.com/tamago3keran/items/cdfd66b627b3686846d2
     - https://qiita.com/tetsuya/items/75987487ffac42250d3b
     - https://qiita.com/hisayuki/items/99ea1b667de71e908891
