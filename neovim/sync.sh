@@ -27,7 +27,7 @@ if [ $# -ne 1 ]; then
 fi
 
 if [ "$1" = "deploy" ]; then
-    rsync -auv --exclude='.netrwhist' ./$NVIM_CONFIG_PATH/ ~/$NVIM_CONFIG_PATH/ 
+    rsync -auv --exclude='.netrwhist' ./$NVIM_CONFIG_PATH/ ~/$NVIM_CONFIG_PATH/
 elif [ "$1" = "import" ]; then
     rsync -auv --exclude='.netrwhist' ~/$NVIM_CONFIG_PATH/ ./$NVIM_CONFIG_PATH/
 elif [ "$1" = "link" ]; then
