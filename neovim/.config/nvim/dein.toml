@@ -109,6 +109,10 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 '''
 
+## tab
+#[[plugins]]
+#repo = 'ervandew/supertab'
+
 ## commentry
 [[plugins]]
 repo = 'tpope/vim-commentary'
@@ -125,9 +129,19 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'Townk/vim-autoclose'
 
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+
 ## HTML, XML, ...
 [[plugins]]
 repo = 'alvan/vim-closetag'
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+## trailing-whitespace
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
 
 ## syntax
 [[plugins]]
@@ -136,4 +150,14 @@ repo = 'sheerun/vim-polyglot'
 ## Syntax checker
 [[plugins]]
 repo = 'w0rp/ale'
+
+## mark, tag
+[[plugins]]
+repo = 'szw/vim-tags'
+
+[[plugins]]
+repo = 'majutsushi/tagbar'
+
+[[plugins]]
+repo = 'jacquesbh/vim-showmarks'
 
