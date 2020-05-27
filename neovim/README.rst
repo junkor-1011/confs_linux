@@ -16,9 +16,9 @@ config file location
    #     └── init.vim
 
    tree ~/.config -a -P "*dein*" --prune
-   # ~/.config               
-   #  └── nvim              
-   #      ├── dein.toml     
+   # ~/.config
+   #  └── nvim
+   #      ├── dein.toml
    #      └── dein_lazy.toml
 
 
@@ -111,5 +111,5 @@ CheatSheet
 - https://qiita.com/takeharu/items/9d1c3577f8868f7b07b5
 - https://qiita.com/tpywao/items/bd119f0075e40d47c88b
 - https://qiita.com/iwaseasahi/items/f536bb3772d2fad5e03c
-- https://qiita.com/tsumac/items/3972d5347a5f6e37ca09 
+- https://qiita.com/tsumac/items/3972d5347a5f6e37ca09
 - https://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
