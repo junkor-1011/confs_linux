@@ -1,6 +1,9 @@
+# Package Magager
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+
+# UI, search
 [[plugins]]
 repo = 'Shougo/denite.nvim'
 hook_add = '''
@@ -19,54 +22,8 @@ repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 
 [[plugins]]
-repo = 'thinca/vim-quickrun'
-
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/defx.vim
-nnoremap <silent> <Leader>f :<C-u> Defx <CR>
-'''
-
-[[plugins]]
-repo = 'ryanoasis/vim-devicons'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
-
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
-
-[[plugins]]
-repo = 'preservim/nerdtree'
-hook_add = '''
-nnoremap <silent><C-e> :NERDTreeToggle<CR>
-'''
-
-[[plugins]]
-repo = 'Xuyuanp/nerdtree-git-plugin'
-
-[[plugins]]
-repo = 'airblade/vim-gitgutter'
-
-[[plugins]]
-repo = 'tpope/vim-fugitive'
-
-[[plugins]]
-repo = 'tpope/vim-endwise'
-
-[[plugins]]
-repo = 'Townk/vim-autoclose'
-
-[[plugins]]
-repo = 'osyo-manga/vim-anzu'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/anzu.vim
-'''
-
-# Syntax checker
-[[plugins]]
-repo = 'w0rp/ale'
+repo = 'mileszs/ack.vim'
+## Themes, StatusLine
 
 # statusline plugin
 #[[plugins]]
@@ -90,9 +47,93 @@ repo = 'vim-airline/vim-airline-themes'
 #colorscheme onedark
 #'''
 
+
+# File Tree
+
+## Defx
+[[plugins]]
+repo = 'Shougo/defx.nvim'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/defx.vim
+nnoremap <silent> <Leader>f :<C-u> Defx <CR>
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-icons'
+
+[[plugins]]
+repo = 'kristijanhusak/defx-git'
+
+## NERDTree
+[[plugins]]
+repo = 'preservim/nerdtree'
+hook_add = '''
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
+'''
+
+[[plugins]]
+repo = 'Xuyuanp/nerdtree-git-plugin'
+
+# launch
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# Git
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# editor utils
+
+## block
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
+## Search
+[[plugins]]
+repo = 'osyo-manga/vim-anzu'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/anzu.vim
+'''
+
+## visual expand
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+## commentry
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+## repeat
+[[plugins]]
+repo = 'tpope/vim-repeat'
+
+## surround
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+## bracket
+[[plugins]]
+repo = 'Townk/vim-autoclose'
+
+## HTML, XML, ...
 [[plugins]]
 repo = 'alvan/vim-closetag'
 
+## syntax
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
+
+## Syntax checker
+[[plugins]]
+repo = 'w0rp/ale'
 

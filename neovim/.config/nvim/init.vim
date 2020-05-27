@@ -23,7 +23,53 @@ set splitright
 
 set diffopt+=vertical
 
+" customize keymap------------------------
+
+" Leader
 let mapleader = "\<Space>"
+
+" save file
+nnoremap <Leader>w :w<CR>
+
+" system clipboard
+vmap <Leader>y "+y
+vmap <Leader>d "+d
+nmap <Leader>p "+p
+nmap <Leader>P "+P
+vmap <Leader>p "+p
+vmap <Leader>P "+P
+
+" visual line
+nmap <Leader><Leader> V
+
+" define command--------------------------
+
+" ref: https://nanasi.jp/articles/vim/cmdex_vim.html
+
+" CdCurrent
+command! -nargs=0 CdCurrent cd %:p:h
+" VDsplit
+command! -nargs=1 -complete=file VDsplit vertical diffsplit <args>
+" :IminsertOff/On
+command! -nargs=0 IminsertOff inoremap <buffer> <silent> <ESC> <ESC>:set iminsert=0<CR>
+command! -nargs=0 IminsertOn iunmap <buffer> <ESC>
+" :Scratch
+"   Open a scratch (no file) buffer.
+command! -nargs=0 Scratch new | setlocal bt=nofile noswf | let b:cmdex_scratch = 1
+function! s:CheckScratchWritten()
+  if &buftype ==# 'nofile' && expand('%').'x' !=# 'x' && exists('b:cmdex_scratch') && b:cmdex_scratch == 1
+    setlocal buftype= swapfile
+    unlet b:cmdex_scratch
+  endif
+endfunction
+augroup CmdexScratch
+autocmd!
+autocmd BufWritePost * call <SID>CheckScratchWritten()
+augroup END
+" :Undiff
+"   Turn off diff mode for current buffer.
+command! -nargs=0 Undiff set nodiff noscrollbind wrap nocursorbind
+
 
 "dein Scripts-----------------------------
 if &compatible
