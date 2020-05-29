@@ -149,6 +149,30 @@ augroup END
 command! -nargs=0 Undiff set nodiff noscrollbind wrap nocursorbind
 
 
+"neovim backend --------------------------
+
+" Python3
+let s:python3_nvim_backend = getenv("PYTHON3_NVIM_BACKEND")
+if s:python3_nvim_backend != v:null
+    let g:python3_host_prog = s:python3_nvim_backend
+endif
+unlet s:python3_nvim_backend
+
+" nodejs
+let s:node_nvim_backend = getenv("NODE_NVIM_BACKEND")
+if s:node_nvim_backend != v:null
+    let g:node_host_prog = s:node_nvim_backend
+endif
+unlet s:node_nvim_backend
+
+" ruby
+let s:ruby_nvim_backend = getenv("RUBY_NVIM_BACKEND")
+if s:ruby_nvim_backend != v:null
+    let g:ruby_host_prog = s:ruby_nvim_backend
+endif
+unlet s:ruby_nvim_backend
+
+
 "dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
