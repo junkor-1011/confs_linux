@@ -23,6 +23,8 @@ set splitright
 
 set diffopt+=vertical
 
+set termguicolors
+
 " customize keymap------------------------
 
 " Leader
