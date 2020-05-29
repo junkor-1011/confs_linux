@@ -42,6 +42,84 @@ vmap <Leader>P "+P
 " visual line
 nmap <Leader><Leader> V
 
+" buffer
+nnoremap <Leader>bp :bprev<CR>
+nnoremap <Leader>bn :bnext<CR>
+nnoremap <Leader>bf :bfirst<CR>
+nnoremap <Leader>bl :blast<CR>
+nnoremap <Leader>bd :bdelete<CR>
+
+" Emacs Keybind in InsertMode
+" CAUTION: Some keybinds are not set because they conflict with Vim's default keybinds.
+
+" CAUTION: <UP> & <Down> conflict completion functions.
+" imap <C-p> <Up>
+" imap <C-n> <Down>
+" imap <C-b> <Left>
+" imap <C-f> <Right>
+" imap <C-a> <C-o>:call <SID>home()<CR>
+" imap <C-a> <home>
+" imap <C-e> <End>
+" imap <C-d> <Del>
+" INFO: <C-h> is vim's default function.
+" imap <C-h> <BS>
+" imap <C-k> <C-r>=<SID>kill()<CR>
+
+" function! s:home()
+"   let start_column = col('.')
+"   normal! ^
+"   if col('.') == start_column
+"   ¦ normal! 0
+"   endif
+"   return ''
+" endfunction
+
+" function! s:kill()
+"   let [text_before, text_after] = s:split_line()
+"   if len(text_after) == 0
+"   ¦ normal! J
+"   else
+"   ¦ call setline(line('.'), text_before)
+"   endif
+"   return ''
+" endfunction
+
+" function! s:split_line()
+"   let line_text = getline(line('.'))
+"   let text_after  = line_text[col('.')-1 :]
+"   let text_before = (col('.') > 1) ? line_text[: col('.')-2] : ''
+"   return [text_before, text_after]
+" endfunction
+
+" 意外とVimのkeybindと被ることが分かったので、多くのものは設定を断念
+
+
+
+" No Yank by 'x'
+vnoremap x "_x
+nnoremap x "_x
+
+
+" window
+" Save: <Leader>w と干渉するので断念
+" nmap <Leader>w [window]
+" nnoremap [window]h <C-w>h
+" nnoremap [window]j <C-w>j
+" nnoremap [window]k <C-w>k
+" nnoremap [window]l <C-w>l
+
+
+" No Ex-Mode
+nnoremap Q gq
+
+
+" moving
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+
 " define command--------------------------
 
 " ref: https://nanasi.jp/articles/vim/cmdex_vim.html
@@ -110,3 +188,4 @@ if dein#check_install()
 endif
 
 "End dein Scripts-------------------------
+

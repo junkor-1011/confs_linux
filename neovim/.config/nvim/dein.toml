@@ -23,7 +23,8 @@ depends = 'fzf'
 
 [[plugins]]
 repo = 'mileszs/ack.vim'
-## Themes, StatusLine
+
+## Themes, StatusLine, Visualization
 
 # statusline plugin
 #[[plugins]]
@@ -34,6 +35,8 @@ repo = 'vim-airline/vim-airline'
 depends = ['vim-airline-themes']
 hook_add = '''
 source ~/.config/nvim/plugins_dein/vim-airline.vim
+" default theme: dark
+let g:airline_theme = 'dark'
 "let g:airline_theme = 'molokai'
 '''
 
@@ -47,6 +50,9 @@ repo = 'vim-airline/vim-airline-themes'
 #colorscheme onedark
 #'''
 
+### colored bracket
+[[plugins]]
+repo = 'luochen1990/rainbow'
 
 # File Tree
 
@@ -157,6 +163,10 @@ repo = 'szw/vim-tags'
 
 [[plugins]]
 repo = 'majutsushi/tagbar'
+hook_add = '''
+" TMP
+nmap <F8> :TagbarToggle<CR>
+'''
 
 [[plugins]]
 repo = 'jacquesbh/vim-showmarks'
