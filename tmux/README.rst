@@ -29,7 +29,7 @@ color test
         printf "\n";
     }'
 
-.. image:: https://user-images.githubusercontent.com/57840144/83319324-820eba80-a278-11ea-8c09-413ac98db2b4.png
+.. image:: https://user-images.githubusercontent.com/57840144/83319457-969f8280-a279-11ea-810e-706651f7fa81.png
 
 Useful Links
 ---------------
