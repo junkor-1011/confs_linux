@@ -5,16 +5,20 @@ hook_add = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
 '''
 
-[[plugins]]
-repo = "davidhalter/jedi-vim"
-on_ft = ['python']
+# [[plugins]]
+# repo = "davidhalter/jedi-vim"
+# on_ft = ['python']
 
 
 [[plugins]]
 repo = 'zchee/deoplete-jedi'
 on_ft = 'python'
-#hook_add = '''
-#    let g:deoplete#sources#jedi#python_path = '/usr/local/bin/python3.6'
-#'''
+hook_add = '''
+let s:python3_project  = getenv("PYTHON3_PROJECT")
+if s:python3_project != v:null
+    let g:deoplete#sources#jedi#python_path = s:python3_project
+endif
+unlet s:python3_project
+'''
 
 
