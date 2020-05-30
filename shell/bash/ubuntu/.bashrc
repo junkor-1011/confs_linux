@@ -133,7 +133,8 @@ export PATH="~/.cargo/bin:$PATH"
 
 
 ### pyenv ###
-export PATH="~/.pyenv/bin:$PATH"
+export PYENV_HOME="~/.pyenv"
+export PATH="${PYENV_HOME}/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
