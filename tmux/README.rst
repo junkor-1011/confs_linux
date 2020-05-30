@@ -18,4 +18,7 @@ Useful Links
 - https://blog.abekoh.dev/post/prj-command/
 - https://blog.craftz.dog/my-dev-workflow-using-tmux-vim-48f73cc4f39e
 - https://rcmdnk.com/blog/2017/11/17/computer-vim/
+- https://qiita.com/purutane/items/1d1dc4818013bbbaead4
+- https://inokara.hateblo.jp/entry/2013/07/04/233051
+
 
