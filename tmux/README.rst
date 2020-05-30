@@ -7,6 +7,30 @@ tmux conf
 
 - `.tmux.conf <./.tmux.conf>`_
 
+color test
+-------------
+
+- `参考 <https://kotaro7750.hatenablog.com/entry/tmux_vim_undercurl>`_
+
+.. code-block:: Bash
+
+    # exec in terminal (bash)
+    awk 'BEGIN{
+        s="/\\/\\/\\/\\/\\"; s=s s s s s s s s;
+        for (colnum = 0; colnum<77; colnum++) {
+            r = 255-(colnum*255/76);
+            g = (colnum*510/76);
+            b = (colnum*255/76);
+            if (g>255) g = 510-g;
+            printf "\033[48;2;%d;%d;%dm", r,g,b;
+            printf "\033[38;2;%d;%d;%dm", 255-r,255-g,255-b;
+            printf "%s\033[0m", substr(s,colnum+1,1);
+        }
+        printf "\n";
+    }'
+
+.. image:: https://user-images.githubusercontent.com/57840144/83319324-820eba80-a278-11ea-8c09-413ac98db2b4.png
+
 Useful Links
 ---------------
 
@@ -18,4 +42,7 @@ Useful Links
 - https://blog.abekoh.dev/post/prj-command/
 - https://blog.craftz.dog/my-dev-workflow-using-tmux-vim-48f73cc4f39e
 - https://rcmdnk.com/blog/2017/11/17/computer-vim/
+- https://qiita.com/nl0_blu/items/9d207a70ccc8467f7bab
+- https://qiita.com/murachi1208/items/36d7676558d5535b44db
+- https://qiita.com/ijiest/items/4a42e8543df373babcf2
 
