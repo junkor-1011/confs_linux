@@ -3,6 +3,14 @@ repo = 'Shougo/deoplete.nvim'
 on_event = 'InsertEnter'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
+
+" 汚いが、OS毎の分岐を作るのは面倒そうなのでここでdeoplete-tabnineも入れてしまう
+" deoplete-tabnine
+if has('win32') || has('win64')
+  call dein#add('tbodt/deoplete-tabnine', { 'build': 'powershell.exe .\install.ps1' })
+else
+  call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
+endif
 '''
 
 # [[plugins]]
@@ -33,4 +41,18 @@ on_ft = 'javascript'
 build = 'npm install -g tern'
 # linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
 
+
+# vim-lsp
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+on_event = 'InsertEnter'
+
+
+# tabnine (AI)
+# [[plugins]]
+# repo = 'tbodt/deoplete-tabnine'
+# on_event = 'InsertEnter'
+# build = '''
+# ./install.sh
+# '''
 
