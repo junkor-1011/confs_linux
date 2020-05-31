@@ -227,10 +227,10 @@ hook_add = '''
 # """
 
 # Windowsだと駄目かも(その場合は適当に処理の分岐を入れなくてはならない)
-[[plugins]]
-repo = 'autozimu/LanguageClient-neovim'
-rev = 'next'
-build = 'bash install.sh'
+# [[plugins]]
+# repo = 'autozimu/LanguageClient-neovim'
+# rev = 'next'
+# build = 'bash install.sh'
 
 # vim-lsp
 [[plugins]]
