@@ -22,3 +22,10 @@ unlet s:python3_project
 '''
 
 
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+on_ft = 'javascript'
+build = 'npm install -g tern'
+# linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
+
+
