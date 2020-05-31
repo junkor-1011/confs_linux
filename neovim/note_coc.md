@@ -1,6 +1,15 @@
 coc.nvim Note
 ================
 
+## Important
+
+`coc` conflicts with `deoplete` because both changes `completeopt`.
+SHOULD NOT mix `coc` and `deoplete`.
+
+- [Ref](https://github.com/Shougo/deoplete.nvim/issues/1092)
+
+## Setting & Other Infos
+
 - https://github.com/neoclide/coc.nvim
 - https://qiita.com/coil_msp123/items/29de76b035dd28af77a9
 - https://qiita.com/Amadeus_vn/items/5dfcf8d3676c2c5576ef

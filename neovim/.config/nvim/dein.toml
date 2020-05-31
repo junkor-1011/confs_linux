@@ -213,11 +213,11 @@ hook_add = '''
 # LSP
 
 ## coc.nvim
-[[plugins]]
-repo = "neoclide/coc.nvim"
-merge = 0
-rev = "release"
-hook_add = """
-source ~/.config/nvim/plugins_dein/coc.vim
-"""
+# [[plugins]]
+# repo = "neoclide/coc.nvim"
+# merge = 0
+# rev = "release"
+# hook_add = """
+# source ~/.config/nvim/plugins_dein/coc.vim
+# """
 
