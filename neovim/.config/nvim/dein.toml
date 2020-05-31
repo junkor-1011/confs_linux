@@ -24,6 +24,10 @@ depends = 'fzf'
 [[plugins]]
 repo = 'mileszs/ack.vim'
 
+[[plugins]]
+repo = 'will133/vim-dirdiff'
+
+
 ## Themes, StatusLine, Visualization
 
 # statusline plugin
