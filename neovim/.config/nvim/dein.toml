@@ -27,6 +27,12 @@ repo = 'mileszs/ack.vim'
 [[plugins]]
 repo = 'will133/vim-dirdiff'
 
+# terminal
+[[plugins]]
+repo = "shougo/deol.nvim"
+hook_add = """
+source ~/.config/nvim/plugins_dein/deol.vim
+"""
 
 ## Themes, StatusLine, Visualization
 
@@ -203,4 +209,15 @@ hook_add = '''
     " Keymap
     nmap <silent> [denite]<C-D> :Denite -buffer-name=gtags_completion gtags_completion<cr>
 '''
+
+# LSP
+
+## coc.nvim
+[[plugins]]
+repo = "neoclide/coc.nvim"
+merge = 0
+rev = "release"
+hook_add = """
+source ~/.config/nvim/plugins_dein/coc.vim
+"""
 
