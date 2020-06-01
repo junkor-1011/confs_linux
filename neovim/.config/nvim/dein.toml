@@ -37,8 +37,8 @@ source ~/.config/nvim/plugins_dein/deol.vim
 ## Themes, StatusLine, Visualization
 
 # statusline plugin
-#[[plugins]]
-#repo = 'itchyny/lightline.vim'
+# [[plugins]]
+# repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'vim-airline/vim-airline'
@@ -48,6 +48,7 @@ source ~/.config/nvim/plugins_dein/vim-airline.vim
 " default theme: dark
 let g:airline_theme = 'dark'
 "let g:airline_theme = 'molokai'
+" let g:airline_powerline_fonts = 1
 '''
 
 [[plugins]]
@@ -96,6 +97,20 @@ repo = 'Xuyuanp/nerdtree-git-plugin'
 # launch
 [[plugins]]
 repo = 'thinca/vim-quickrun'
+
+[[plugins]]
+repo = 'lambdalisue/vim-quickrun-neovim-job'
+hook_add = '''
+let g:quickrun_config = {'_': {}}
+
+if has('nvim')
+  " Use 'neovim_job' in Neovim
+  let g:quickrun_config._.runner = 'neovim_job'
+elseif exists('*ch_close_in')
+  " Use 'job' in Vim which support job feature
+  let g:quickrun_config._.runner = 'job'
+endif
+'''
 
 # Git
 [[plugins]]
@@ -182,6 +197,13 @@ hook_add = '''
 nmap <F8> :TagbarToggle<CR>
 '''
 
+# errorが出るがとりあえず無視
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/vista.vim
+'''
+
 [[plugins]]
 repo = 'jacquesbh/vim-showmarks'
 
@@ -204,15 +226,16 @@ hook_add = '''
     let g:gen_tags#gtags_auto_gen = 1
 '''
 
-[[plugins]]
-repo = 'ozelentok/denite-gtags'
-hook_add = '''
-    " Prefix key
-    nmap [denite] <Nop>
-    map <C-j> [denite]
-    " Keymap
-    nmap <silent> [denite]<C-D> :Denite -buffer-name=gtags_completion gtags_completion<cr>
-'''
+# 一旦disableにしておく
+# [[plugins]]
+# repo = 'ozelentok/denite-gtags'
+# hook_add = '''
+#     " Prefix key
+#     nmap [denite] <Nop>
+#     map <C-j> [denite]
+#     " Keymap
+#     nmap <silent> [denite]<C-D> :Denite -buffer-name=gtags_completion gtags_completion<cr>
+# '''
 
 # LSP
 
