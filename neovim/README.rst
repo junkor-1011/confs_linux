@@ -43,6 +43,8 @@ Useful Links
 ~~~~~~~~~~~~~~
 
 - Recommends Plugins
+    - https://qiita.com/lighttiger2505/items/3065164798bc9cd615d4
+    - https://qiita.com/yutakatay/items/f19b2a0a962a587db5cf
     - https://liginc.co.jp/469142
     - https://qiita.com/karasu78/items/d1489f7cff0c2e0be890
     - https://www.slideshare.net/ShunIwase/vim-141450302
@@ -93,6 +95,12 @@ Useful Links
     - https://shotat.hateblo.jp/entry/2016/09/13/014358
     - http://saihoooooooo.hatenablog.com/entry/2013/09/14/013840
     - https://itchyny.hatenablog.com/entry/20130820/1376978742
+
+- ``vim-lsp``
+    - https://furutsuki.hatenablog.com/entry/2019/12/15/115000
+    - https://shase428.hatenablog.jp/entry/2019/05/10/203917
+    - https://qiita.com/lighttiger2505/items/29fecc9df0fddc80927a
+    - https://hiroyukim.hatenablog.com/entry/2020/01/31/162614
 
 -------------
 
