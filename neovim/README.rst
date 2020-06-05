@@ -122,3 +122,4 @@ CheatSheet
 - https://qiita.com/tsumac/items/3972d5347a5f6e37ca09
 - https://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
 - http://yskwkzhr.blogspot.com/2013/12/10-vim-tips-to-help-the-server-management.html
+- https://thinca.hatenablog.com/entry/vim-short-tips-advent-calendar-2019
