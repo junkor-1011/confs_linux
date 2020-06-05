@@ -121,3 +121,4 @@ CheatSheet
 - https://qiita.com/iwaseasahi/items/f536bb3772d2fad5e03c
 - https://qiita.com/tsumac/items/3972d5347a5f6e37ca09
 - https://qiita.com/yuku_t/items/0c1aff03949cb1b8fe6b
+- http://yskwkzhr.blogspot.com/2013/12/10-vim-tips-to-help-the-server-management.html
