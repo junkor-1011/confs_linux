@@ -242,6 +242,13 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
+# # Gundo
+# [[plugins]]
+# repo = 'sjl/gundo.vim'
+# hook_add = '''
+# nnoremap <Leader><F5> :GundoToggle<CR>
+# '''
+
 # LSP
 
 ## coc.nvim
