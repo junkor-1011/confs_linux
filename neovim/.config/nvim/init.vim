@@ -2,6 +2,9 @@
 
 " BASIC CONF
 "colorscheme koehler
+" colorschemeの設定前に必要な設定を実施
+source ~/.config/nvim/myutils/before_colorscheme.vim
+colorscheme default
 set number  " line number
 "set clipboard=unnamed
 
@@ -17,6 +20,7 @@ set showmatch
 
 set expandtab
 set tabstop=4
+set softtabstop=4
 set shiftwidth=4
 
 set splitright
@@ -24,6 +28,12 @@ set splitright
 set diffopt+=vertical
 
 set termguicolors
+
+" 不可視文字
+" defaultでは非表示, `set list / set nolist`で表示切り替え
+set list
+set listchars=tab:»-,trail:-,eol:↲,extends:»,precedes:«,nbsp:%
+set nolist
 
 " customize keymap------------------------
 
@@ -101,16 +111,6 @@ nnoremap <Leader>bd :bdelete<CR>
 vnoremap x "_x
 nnoremap x "_x
 
-
-" window
-" Save: <Leader>w と干渉するので断念
-" nmap <Leader>w [window]
-" nnoremap [window]h <C-w>h
-" nnoremap [window]j <C-w>j
-" nnoremap [window]k <C-w>k
-" nnoremap [window]l <C-w>l
-
-
 " No Ex-Mode
 nnoremap Q gq
 
@@ -124,6 +124,7 @@ nnoremap gk k
 
 " define command--------------------------
 
+" from Kaoriya-Commands ----------
 " ref: https://nanasi.jp/articles/vim/cmdex_vim.html
 
 " CdCurrent
