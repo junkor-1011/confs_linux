@@ -1,5 +1,4 @@
 0rax/fish-bd
-b4b4r07/enhancd
 jethrokuan/fzf
 jethrokuan/z
 oh-my-fish/plugin-peco
