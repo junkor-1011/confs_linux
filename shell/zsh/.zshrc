@@ -1,13 +1,39 @@
 
 # alias
-alias ls="ls -FG --color=auto"
-alias la="ls -a"
-alias ll="ls -la"
+
+# alias ls="ls -FG --color=auto"
+if [ -x /usr/bin/dircolors ]; then
+    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+    alias ls='ls --color=auto -F'
+    alias dir='dir --color=auto'
+    alias vdir='vdir --color=auto'
+
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
+
+alias ll='ls -alF'
+alias la='ls -AF'
+alias l='ls -CF'
 
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+
+
+# ENVS ---------------------
+# ToDo: bashなどと共通のファイルにしたい
+
+# default editor
+if [ -f /usr/bin/nvim ]; then
+    export EDITOR=/usr/bin/nvim
+else
+    export EDITOR=/usr/bin/vim
+fi
+
+# -----------------------
 
 # fzf auto-generated
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
