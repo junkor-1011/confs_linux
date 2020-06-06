@@ -4,6 +4,11 @@ alias ls="ls -FG --color=auto"
 alias la="ls -a"
 alias ll="ls -la"
 
+# history
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
 # fzf auto-generated
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
