@@ -242,12 +242,13 @@ hook_add = '''
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
 
-# # Gundo
-# [[plugins]]
-# repo = 'sjl/gundo.vim'
-# hook_add = '''
-# nnoremap <Leader><F5> :GundoToggle<CR>
-# '''
+# Gundo
+[[plugins]]
+repo = 'sjl/gundo.vim'
+hook_add = '''
+let g:gundo_prefer_python3 = 1
+nnoremap <Leader><F5> :GundoToggle<CR>
+'''
 
 # LSP
 
