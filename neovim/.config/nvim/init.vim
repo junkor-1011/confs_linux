@@ -8,6 +8,10 @@ colorscheme default
 set number  " line number
 "set clipboard=unnamed
 
+set encoding=utf-8
+
+set fileformats=unix,dos,mac
+
 set autoindent
 set smartindent
 set cindent
