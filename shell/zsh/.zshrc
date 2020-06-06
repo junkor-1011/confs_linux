@@ -55,7 +55,9 @@ zplug "Tarrasch/zsh-bd"
 
 
 # Load theme file
-zplug 'dracula/zsh', as:theme
+# zplug 'dracula/zsh', as:theme
+zplug "sindresorhus/pure" , as:theme
+
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
