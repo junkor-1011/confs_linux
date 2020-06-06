@@ -237,6 +237,11 @@ hook_add = '''
 #     nmap <silent> [denite]<C-D> :Denite -buffer-name=gtags_completion gtags_completion<cr>
 # '''
 
+
+# snippet
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
 # LSP
 
 ## coc.nvim

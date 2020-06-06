@@ -67,4 +67,12 @@ hook_add = '''
 source ~/.config/nvim/plugins_dein/vimspector.vim
 '''
 
+# snippets
+repo = 'Shougo/neosnippet.vim'
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+hook_add = '''
+source ~/.config/nvim/plugins_dein/neosnippet.vim
+'''
+
 
