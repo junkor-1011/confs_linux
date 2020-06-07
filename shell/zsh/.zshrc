@@ -33,6 +33,17 @@ else
     export EDITOR=/usr/bin/vim
 fi
 
+
+
+# pyenv
+if [ -d $HOME/.pyenv ]; then
+    export PYENV_ROOT="$HOME/.pyenv"
+    export PATH="$PYENV_ROOT/bin:$PATH"
+    eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
+    source $(pyenv root)/completions/pyenv.zsh
+fi
+
 # -----------------------
 
 # fzf auto-generated
@@ -58,13 +69,17 @@ zplug "liangguohuan/zsh-dircolors-solarized"
 
 # zplug "woefe/git-prompt.zsh", use:examples/multiline.zsh
 zplug "woefe/git-prompt.zsh"
-source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/multiline.zsh
-# source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/pure.zsh
+# source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/rprompt.zsh
+# source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/multiline.zsh
+source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/pure.zsh
+# ZSH_GIT_PROMPT_ENABLE_SECONDARY=1
 
 # Load theme file
 # zplug 'dracula/zsh', as:theme
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+# zplug "denysdovhan/spaceship-prompt", use:spaceship.zsh, from:github, as:theme
 
+# zplug "sorin-ionescu/prezto"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
