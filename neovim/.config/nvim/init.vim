@@ -156,6 +156,26 @@ augroup END
 command! -nargs=0 Undiff set nodiff noscrollbind wrap nocursorbind
 
 
+" extra setting --------------------------
+
+" memory last cursor position
+" if has("autocmd")
+"   augroup redhat
+"     " In text files, always limit the width of text to 78 characters
+"     autocmd BufRead *.txt set tw=78
+"     " When editing a file, always jump to the last cursor position
+"     autocmd BufReadPost *
+"     \ if line("'"") &gt; 0 &amp;&amp; line ("'"") &lt;= line("$") |
+"     \   exe "normal! g'"" |
+"     \ endif
+"   augroup END
+" endif
+augroup vimrcEx
+  au BufRead * if line("'\"") > 0 && line("'\"") <= line("$") |
+  \ exe "normal g`\"" | endif
+augroup END
+
+
 "neovim backend --------------------------
 
 " Python3
