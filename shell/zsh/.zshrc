@@ -17,6 +17,12 @@ alias ll='ls -alF'
 alias la='ls -AF'
 alias l='ls -CF'
 
+# user define functions
+if [ -f $HOME/.zsh_udf ]; then
+    source $HOME/.zsh_udf
+    # autoload $HOME/.zsh_udf
+fi
+
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
