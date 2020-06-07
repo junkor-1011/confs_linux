@@ -200,6 +200,15 @@ if dein#load_state('~/.cache/dein/')
   "call dein#add('Shougo/neosnippet.vim')
   "call dein#add('Shougo/neosnippet-snippets')
 
+  " deinで無効化するものなどあれば
+  if filereadable('~/.config/nvim/dein_disable.vim')
+      source ~/.config/nvim/dein_disable.vim
+  endif
+
+  if filereadable('~/.config/nvim/before_dein.vim')
+      source ~/.config/nvim/before_dein.vim
+  endif
+
   " use toml
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
