@@ -78,3 +78,8 @@ fi
 # zplug load --verbose
 zplug load
 
+
+# PATHの重複削除 (zsh)
+typeset -U path PATH
+
+
