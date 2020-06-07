@@ -72,7 +72,8 @@ vf() {
 
   if [[ -n $files ]]
   then
-     vim -- $files
+     # vim -- $files
+     ${EDITOR:-/usr/bin/vim} -- $files
      print -l $files[1]
   fi
 }
