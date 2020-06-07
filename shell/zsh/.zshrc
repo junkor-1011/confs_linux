@@ -104,3 +104,12 @@ zplug load
 typeset -U path PATH
 
 
+# -------------------
+
+# local setting
+
+# ファイル名は適当
+if [ -f $HOME/.local_profile.rc ]; then
+   source $HOME/.local_profile.rc
+fi
+

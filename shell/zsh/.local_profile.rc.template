@@ -1,0 +1,19 @@
+
+## X11 ##
+export DISPLAY=localhost:0.0
+export LIBGL_ALWAYS_INDIRECT=1
+
+
+## Docker ##
+#export DOCKER_HOST=tcp://localhost:2375
+export DOCKER_HOST=tcp://0.0.0.0:2375
+alias docker="DOCKER_HOST=${DOCKER_HOST} docker"
+
+
+## nodejs ##
+export NODEJS_HOME=$HOME/LocalApps/nodejs
+export PATH=$NODEJS_HOME/bin:$PATH
+
+## user-original ##
+export PATH=$HOME/bin:$PATH
+
