@@ -250,23 +250,12 @@ let g:gundo_prefer_python3 = 1
 nnoremap <Leader><F5> :GundoToggle<CR>
 '''
 
+# DEBUG
+# TMP
+# [[plugins]]
+# repo = 'vim-vdebug/vdebug'
+
 # LSP
-
-## coc.nvim
-# deopleteと激しくconflictする（cacheが残っていると何かエラー出る）ので、確実に使い分けるようにする
-# [[plugins]]
-# repo = "neoclide/coc.nvim"
-# merge = 0
-# rev = "release"
-# hook_add = """
-# source ~/.config/nvim/plugins_dein/coc.vim
-# """
-
-# Windowsだと駄目かも(その場合は適当に処理の分岐を入れなくてはならない)
-# [[plugins]]
-# repo = 'autozimu/LanguageClient-neovim'
-# rev = 'next'
-# build = 'bash install.sh'
 
 # vim-lsp
 [[plugins]]
