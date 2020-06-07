@@ -50,14 +50,20 @@ zplug "zdharma/fast-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "chrissicool/zsh-256color"
-zplug "woefe/git-prompt.zsh"
+# zplug "woefe/git-prompt.zsh"
 zplug "Tarrasch/zsh-bd"
+zplug "rupa/z", use:z.sh
+zplug "mollifier/cd-gitroot"
+zplug "liangguohuan/zsh-dircolors-solarized"
 
+zplug "woefe/git-prompt.zsh"
+# source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/pure.zsh
+source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/multiline.zsh
 
 # Load theme file
 # zplug 'dracula/zsh', as:theme
 # zplug sindresorhus/pure , as:theme
-zplug "sindresorhus/pure", as:theme
+# zplug "sindresorhus/pure", as:theme
 
 
 # Install plugins if there are plugins that have not been installed
