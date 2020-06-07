@@ -201,11 +201,11 @@ if dein#load_state('~/.cache/dein/')
   "call dein#add('Shougo/neosnippet-snippets')
 
   " deinで無効化するものなどあれば
-  if filereadable('~/.config/nvim/dein_disable.vim')
+  if filereadable(expand('~/.config/nvim/dein_disable.vim'))
       source ~/.config/nvim/dein_disable.vim
   endif
 
-  if filereadable('~/.config/nvim/before_dein.vim')
+  if filereadable(expand('~/.config/nvim/before_dein.vim'))
       source ~/.config/nvim/before_dein.vim
   endif
 

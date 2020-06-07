@@ -59,6 +59,7 @@ on_event = 'InsertEnter'
 # '''
 
 # DEBUG
+# うまく読み込まれていない様子
 # [[plugins]]
 # repo = 'puremourning/vimspector'
 # on_ft = ["python", "javascript", "sh", "bash"]
