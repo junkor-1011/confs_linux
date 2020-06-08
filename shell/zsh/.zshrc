@@ -33,22 +33,22 @@ SAVEHIST=10000
 # ToDo: bashなどと共通のファイルにしたい
 
 # default editor
-if [ -x /usr/bin/nvim ]; then
-    export EDITOR=/usr/bin/nvim
-else
-    export EDITOR=/usr/bin/vim
-fi
+# if [ -x /usr/bin/nvim ]; then
+#     export EDITOR=/usr/bin/nvim
+# else
+#     export EDITOR=/usr/bin/vim
+# fi
 
 
 
 # pyenv
-if [ -d $HOME/.pyenv ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    source $(pyenv root)/completions/pyenv.zsh
-fi
+# if [ -d $HOME/.pyenv ]; then
+#     export PYENV_ROOT="$HOME/.pyenv"
+#     export PATH="$PYENV_ROOT/bin:$PATH"
+#     eval "$(pyenv init -)"
+#     eval "$(pyenv virtualenv-init -)"
+#     source $(pyenv root)/completions/pyenv.zsh
+# fi
 
 # -----------------------
 
@@ -107,6 +107,7 @@ typeset -U path PATH
 # -------------------
 
 # local setting
+# ToDo: 順序や位置づけなど
 
 # ファイル名は適当
 # zsh
