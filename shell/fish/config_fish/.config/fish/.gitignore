@@ -1,4 +1,5 @@
 *
 !sync.sh
 !config.fish
+!config_local.fish.template
 !.gitignore

@@ -15,3 +15,13 @@ alias ll='ls -alF'
 alias la='ls -AF'
 alias l='ls -CF'
 
+# local setting
+if test -f $HOME/.config/fish/config_local.fish
+    source $HOME/.config/fish/config_local.fish
+end
+
+# PATH重複除去
+# set -U fish_user_paths (echo $fish_user_paths | tr ' ' '\n' | sort -u)
+# set -U PATH (echo $PATH | tr ' ' '\n' | sort -u)
+
+
