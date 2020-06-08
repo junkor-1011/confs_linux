@@ -29,42 +29,17 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 
-# ENVS ---------------------
-# ToDo: bashなどと共通のファイルにしたい
-
-# default editor
-# if [ -x /usr/bin/nvim ]; then
-#     export EDITOR=/usr/bin/nvim
-# else
-#     export EDITOR=/usr/bin/vim
-# fi
-
-
-
-# pyenv
-# if [ -d $HOME/.pyenv ]; then
-#     export PYENV_ROOT="$HOME/.pyenv"
-#     export PATH="$PYENV_ROOT/bin:$PATH"
-#     eval "$(pyenv init -)"
-#     eval "$(pyenv virtualenv-init -)"
-#     source $(pyenv root)/completions/pyenv.zsh
-# fi
-
-# -----------------------
-
-
+# ---------------------------------- #
 # Plugins
 # using zplug
 if [ -f $HOME/.zsh_local/zplug_setting.zsh ]; then
     source $HOME/.zsh_local/zplug_setting.zsh
 fi
+# ---------------------------------- #
 
 
 
-
-# -------------------
-
-# local setting
+# local setting -------------------- #
 # ToDo: 順序や位置づけなど
 
 

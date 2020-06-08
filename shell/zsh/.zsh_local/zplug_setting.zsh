@@ -20,8 +20,14 @@ zplug "liangguohuan/zsh-dircolors-solarized"
 zplug "woefe/git-prompt.zsh"
 # source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/rprompt.zsh
 # source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/multiline.zsh
-source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/pure.zsh
+# source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/pure.zsh
 # ZSH_GIT_PROMPT_ENABLE_SECONDARY=1
+if [ -f $HOME/.zsh_local/plugin_custom/git-prompt/multiline_custom.zsh ]; then
+    # using custom-prompt
+    source $HOME/.zsh_local/plugin_custom/git-prompt/multiline_custom.zsh
+else
+    source $HOME/.zplug/repos/woefe/git-prompt.zsh/examples/multiline.zsh
+fi
 
 # Load theme file
 # zplug 'dracula/zsh', as:theme
