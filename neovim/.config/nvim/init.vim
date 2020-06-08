@@ -176,6 +176,11 @@ augroup vimrcEx
 augroup END
 
 
+" local setting
+if filereadable(expand('~/.config/nvim/local_setting.vim'))
+  source ~/.config/nvim/local_setting.vim
+endif
+
 "neovim backend --------------------------
 
 " Python3
