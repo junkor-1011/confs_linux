@@ -9,7 +9,7 @@ cd $SCRIPT_DIR
 
 # config path
 ZSHRC_CONFIG_PATH=.zshrc
-ZSH_UDF_PATH=.zsh_udf
+ZSH_LOCALCONF_PATH=.zsh_local
 
 help=$(cat << EOS
 
@@ -31,10 +31,10 @@ fi
 
 if [ "$1" = "deploy" ]; then
     rsync -auv ./$ZSHRC_CONFIG_PATH ~/$ZSHRC_CONFIG_PATH
-    rsync -auv ./$ZSH_UDF_PATH ~/$ZSH_UDF_PATH
+    rsync -auv ./$ZSH_LOCALCONF_PATH/ ~/$ZSH_LOCALCONF_PATH/
 elif [ "$1" = "import" ]; then
     rsync -auv ~/$ZSHRC_CONFIG_PATH ./$ZSHRC_CONFIG_PATH
-    rsync -auv ~/$ZSH_UDF_PATH ./$ZSH_UDF_PATH
+    rsync -auv ~/$ZSH_LOCALCONF_PATH/ ./$ZSH_LOCALCONF_PATH/
 elif [ "$1" = "link" ]; then
     if [ -e ~/$ZSHRC_CONFIG_PATH ]; then
         # はじめからsymbolic linkで管理していることを前提
@@ -42,10 +42,10 @@ elif [ "$1" = "link" ]; then
         unlink ~/$ZSHRC_CONFIG_PATH
     fi
     ln -s $(pwd)/$ZSHRC_CONFIG_PATH ~/$ZSHRC_CONFIG_PATH
-    if [ -e ~/$ZSH_UDF_PATH ]; then
-        unlink ~/$ZSH_UDF_PATH
+    if [ -e ~/$ZSH_LOCALCONF_PATH ]; then
+        unlink ~/$ZSH_LOCALCONF_PATH
     fi
-    ln -s $(pwd)/$ZSH_UDF_PATH ~/$ZSH_UDF_PATH
+    ln -s $(pwd)/$ZSH_LOCALCONF_PATH ~/$ZSH_LOCALCONF_PATH
 else
     echo "wrong argument \n"
     echo "$help"

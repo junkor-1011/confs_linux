@@ -18,8 +18,8 @@ alias la='ls -AF'
 alias l='ls -CF'
 
 # user define functions
-if [ -f $HOME/.zsh_udf ]; then
-    source $HOME/.zsh_udf
+if [ -f $HOME/.zsh_local/udf.zsh ]; then
+    source $HOME/.zsh_local/udf.zsh
     # autoload $HOME/.zsh_udf
 fi
 
@@ -109,7 +109,15 @@ typeset -U path PATH
 # local setting
 
 # ファイル名は適当
-if [ -f $HOME/.shell_local_rc ]; then
-   source $HOME/.shell_local_rc
+# zsh
+if [ -f $HOME/.zsh_local/local_rc.zsh ]; then
+    source $HOME/.zsh_local/local_rc.zsh
 fi
+
+# symbolic linkを張って`bash`と`zsh`で共有するなど
+if [ -f $HOME/.zsh_local/local_rc.sh ]; then
+   source $HOME/.zsh_local/local_rc.sh
+fi
+
+
 
