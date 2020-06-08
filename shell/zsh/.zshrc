@@ -33,7 +33,7 @@ SAVEHIST=10000
 # ToDo: bashなどと共通のファイルにしたい
 
 # default editor
-if [ -f /usr/bin/nvim ]; then
+if [ -x /usr/bin/nvim ]; then
     export EDITOR=/usr/bin/nvim
 else
     export EDITOR=/usr/bin/vim
