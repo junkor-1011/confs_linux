@@ -8,5 +8,6 @@ dependencies:
   - nodejs
   - pygments
   - ctags
+  - python-language-server
   # - pip:
   #   - sqlalchemy-views>=0.2

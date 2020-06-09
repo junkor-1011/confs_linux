@@ -49,6 +49,11 @@ $ npm install -g neovim
 # added 42 packages from 36 contributors in 3.243s
 ```
 
+```Bash
+# for ternjs
+npm install -g tern
+```
+
 - CAUTION
     - `conda`の`node`はその環境に入っていないとうまく使えない
         - 外から`g:node_host_prog`で絶対パスを指定して使おうとしてもエラーが出る（ことがある）
