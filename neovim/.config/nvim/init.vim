@@ -238,6 +238,9 @@ if dein#load_state('~/.cache/dein/')
   call dein#load_toml('~/.config/nvim/dein.toml', {'lazy': 0})
   call dein#load_toml('~/.config/nvim/dein_lazy.toml', {'lazy': 1})
 
+  " remove trash (test)
+  call map(dein#check_clean(), "delete(v:val, 'rf')")
+
   " Required:
   call dein#end()
   call dein#save_state()

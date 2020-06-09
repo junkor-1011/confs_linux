@@ -293,6 +293,17 @@ repo = 'mattn/vim-lsp-icons'
 # [[plugins]]
 # repo = 'codota/tabnine-vim'
 
+# DEBUG
+[[plugins]]
+repo = 'puremourning/vimspector'
+# on_ft = ["python", "javascript", "sh", "bash"]
+build = "./install_gadget.py --enable-python --enable-bash --force-enable-chrome"
+hook_add = '''
+source ~/.config/nvim/plugins_dein/vimspector.vim
+'''
+
+
+
 # Others ------
 
 [[plugins]]

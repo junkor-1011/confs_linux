@@ -1,4 +1,5 @@
 local_setting.vim
+dein_disable.vim
 kite
 GTAGS
 GPATH
