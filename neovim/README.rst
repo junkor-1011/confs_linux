@@ -75,6 +75,9 @@ Useful Links
 - ``dein``
     - https://qiita.com/delphinus/items/00ff2c0ba972c6e41542
     - https://qiita.com/delphinus/items/cd221a450fd23506e81a
+    - http://katsumeshix.hatenablog.jp/entry/2017/10/16/103709
+        - in ``init.vim`` , write ``call map(dein#check_clean(), "delete(v:val, 'rf')")``
+        - excute ``:call dein#recache_runtimepath()``
 
 - ``defx``
     - https://qiita.com/arks22/items/9688ec7f4cb43444e9d9
