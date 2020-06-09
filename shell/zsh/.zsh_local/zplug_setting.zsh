@@ -4,7 +4,7 @@ zplug 'zplug/zplug', hook-build:'zplug --self-manage'
 
 zplug "mafredri/zsh-async"
 # zplug "sindresorhus/pure"
-zplug "zsh-users/zsh-syntax-highlighting", defer:2
+# zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zdharma/history-search-multi-word"
 zplug "zdharma/fast-syntax-highlighting"
 zplug "zsh-users/zsh-completions"
