@@ -1,4 +1,6 @@
 
+# ToDo: 最初に行うべき設定と最後に行うべき設定とに区別・整理 (可能ならファイル毎分離)
+
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -22,16 +24,20 @@ alias ll='ls -alF'
 alias la='ls -AF'
 alias l='ls -CF'
 
-# user define functions
-if [ -f $HOME/.zsh_local/udf.zsh ]; then
-    source $HOME/.zsh_local/udf.zsh
-    # autoload $HOME/.zsh_udf
-fi
+# moving directory
+setopt auto_cd
+setopt auto_pushd
 
 # history
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
+setopt hist_ignore_dups
+setopt share_history
+
+# execute command
+setopt correct
+setopt list_packed
 
 
 # ---------------------------------- #
@@ -50,6 +56,14 @@ fi
 
 # fzf auto-generated
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# user define functions
+if [ -f $HOME/.zsh_local/udf.zsh ]; then
+    source $HOME/.zsh_local/udf.zsh
+    # autoload $HOME/.zsh_udf
+fi
+
 
 # ファイル名は適当
 # zsh
