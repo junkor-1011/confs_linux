@@ -27,6 +27,7 @@ alias l='ls -CF'
 # moving directory
 setopt auto_cd
 setopt auto_pushd
+setopt extended_glob
 
 # history
 HISTFILE=$HOME/.zsh_history
@@ -38,6 +39,10 @@ setopt share_history
 # execute command
 setopt correct
 setopt list_packed
+
+# keybind
+bindkey -e  # Emacs
+# bindkey -v  # Vi
 
 
 # ---------------------------------- #
