@@ -1,0 +1,13 @@
+name: nvim_backend
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python==3.8.*
+  - pynvim
+  - nodejs
+  - pygments
+  - ctags
+  - python-language-server
+  # - pip:
+  #   - sqlalchemy-views>=0.2

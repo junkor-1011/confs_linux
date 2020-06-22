@@ -1,0 +1,100 @@
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+on_event = 'InsertEnter'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/deoplete.vim
+
+" 汚いが、OS毎の分岐を作るのは面倒そうなのでここでdeoplete-tabnineも入れてしまう
+" deoplete-tabnine
+if has('win32') || has('win64')
+  call dein#add('tbodt/deoplete-tabnine', { 'build': 'powershell.exe .\install.ps1' })
+else
+  call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
+endif
+'''
+
+# [[plugins]]
+# repo = "davidhalter/jedi-vim"
+# on_ft = ['python']
+
+
+# deoplete-vim-lspがあるが、普通にjediを使う方が現在は安定しそう
+[[plugins]]
+repo = 'zchee/deoplete-jedi'
+on_ft = 'python'
+hook_add = '''
+let s:python3_project  = getenv("PYTHON3_PROJECT")
+if s:python3_project != v:null
+    let g:deoplete#sources#jedi#python_path = s:python3_project
+endif
+unlet s:python3_project
+'''
+
+# pep8 indent
+[[plugins]]
+repo = 'Vimjas/vim-python-pep8-indent'
+on_ft = 'python'
+
+# python virtualenv
+[[plugins]]
+repo = 'jmcantrell/vim-virtualenv'
+on_ft = ['python']
+
+# [[plugins]]
+# repo = 'lambdalisue/vim-pyenv'
+# on_ft = ['python']
+
+
+# zsh
+[[plugins]]
+repo = 'deoplete-plugins/deoplete-zsh'
+on_ft = 'zsh'
+
+
+# Docker
+# [[plugins]]
+# repo = 'deoplete-plugins/deoplete-docker'
+# on_ft = 'Docker'
+
+# javascript
+# deoplete-vim-lspがあるが、ternjsの方が有効なこともまだ多そうな感じ
+[[plugins]]
+repo = 'carlitux/deoplete-ternjs'
+on_ft = 'javascript'
+build = 'npm install -g tern'
+# linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
+
+
+# vim-lsp
+[[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+on_event = 'InsertEnter'
+
+
+# tabnine (AI)
+# [[plugins]]
+# repo = 'tbodt/deoplete-tabnine'
+# on_event = 'InsertEnter'
+# build = '''
+# ./install.sh
+# '''
+
+# DEBUG
+# うまく読み込まれていない様子
+# [[plugins]]
+# repo = 'puremourning/vimspector'
+# on_ft = ["python", "javascript", "sh", "bash"]
+# build = "./install_gadget.py --enable-python --enable-bash --force-enable-chrome"
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/vimspector.vim
+# '''
+
+# snippets
+repo = 'Shougo/neosnippet.vim'
+on_ft = ['snippet']
+depends = ['neosnippet-snippets']
+hook_add = '''
+source ~/.config/nvim/plugins_dein/neosnippet.vim
+'''
+
+
