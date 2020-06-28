@@ -2,7 +2,7 @@
 confs linux
 ===================
 
-一般的な``dotfiles`` の位置付け
+一般的な ``dotfiles`` の位置付け
 
 - リポジトリ名を実際にdotfilesなどのように変える可能性
 - 各項目を一斉にデプロイ出来るような ``sh`` スクリプトをかけると便利
@@ -11,5 +11,5 @@ confs linux
 
 ---------
 
-## Under Construction...
-
+Under Construction...
+^^^^^^^^^^^^^^^^^^^^^^^^^^
