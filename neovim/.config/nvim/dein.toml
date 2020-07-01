@@ -181,7 +181,11 @@ repo = 'sheerun/vim-polyglot'
 
 ## Syntax checker
 [[plugins]]
-repo = 'w0rp/ale'
+# repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/ale.vim
+'''
 
 # https://github.com/vim-syntastic/syntastic
 # [[plugins]]
