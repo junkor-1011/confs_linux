@@ -22,7 +22,8 @@ if not functions -q fisher
     fish -c fisher
 end
 
-set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
+# set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
+set -x PATH $HOME/.local/bin:$PATH
 
 # local setting
 if test -f $HOME/.config/fish/config_local.fish
