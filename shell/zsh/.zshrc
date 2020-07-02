@@ -31,8 +31,8 @@ setopt extended_glob
 
 # history
 HISTFILE=$HOME/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=30000
+SAVEHIST=30000
 setopt hist_ignore_dups
 setopt share_history
 
@@ -58,6 +58,7 @@ fi
 # local setting -------------------- #
 # ToDo: 順序や位置づけなど
 
+export PATH=$HOME/.local/bin:$PATH
 
 # fzf auto-generated
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
