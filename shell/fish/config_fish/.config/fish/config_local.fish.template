@@ -1,8 +1,8 @@
 
 # pyenv
 if test -d $HOME/.pyenv
-    set -Ux PYENV_ROOT $HOME/.pyenv
-    set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+    set -x PYENV_ROOT $HOME/.pyenv
+    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
     # eval (pyenv init -)
     status --is-interactive; and pyenv init - | source
     status --is-interactive; and pyenv virtualenv-init - | source
@@ -28,13 +28,14 @@ alias docker "DOCKER_HOST=$DOCKER_HOST /usr/bin/docker"
 
 ## nodejs ##
 set -x NODEJS_HOME $HOME/LocalApps/nodejs
-set -x PATH $NODEJS_HOME/bin:$PATH
+# set -x PATH $NODEJS_HOME/bin:$PATH
+set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
 
 ## fzf
 if test -d $HOME/.fzf/bin
-    set -Ux fish_user_paths $HOME/.fzf/bin $fish_user_paths
+    set -g fish_user_paths $HOME/.fzf/bin $fish_user_paths
 end
 
 ## user-original ##
-set -x PATH $HOME/bin:$PATH
+set -x fish_user_paths $HOME/bin $fish_user_paths
 
