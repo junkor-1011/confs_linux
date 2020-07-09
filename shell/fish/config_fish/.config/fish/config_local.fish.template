@@ -31,9 +31,11 @@ end
 
 
 ## nodejs ##
-set -x NODEJS_HOME $HOME/LocalApps/nodejs
-# set -x PATH $NODEJS_HOME/bin:$PATH
-set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
+if test -d $HOME/LocalApps/nodejs
+    set -x NODEJS_HOME $HOME/LocalApps/nodejs
+    # set -x PATH $NODEJS_HOME/bin:$PATH
+    set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
+end
 
 ## fzf
 if test -d $HOME/.fzf/bin
