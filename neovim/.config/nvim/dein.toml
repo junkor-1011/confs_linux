@@ -181,7 +181,11 @@ repo = 'sheerun/vim-polyglot'
 
 ## Syntax checker
 [[plugins]]
-repo = 'w0rp/ale'
+# repo = 'w0rp/ale'
+repo = 'dense-analysis/ale'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/ale.vim
+'''
 
 # https://github.com/vim-syntastic/syntastic
 # [[plugins]]
@@ -242,6 +246,12 @@ hook_add = '''
 # snippet
 [[plugins]]
 repo = 'Shougo/neosnippet-snippets'
+
+[[plugins]]
+repo = 'thomasfaingnaert/vim-lsp-snippets'
+
+[[plugins]]
+repo = 'thomasfaingnaert/vim-lsp-neosnippet'
 
 # Gundo
 [[plugins]]

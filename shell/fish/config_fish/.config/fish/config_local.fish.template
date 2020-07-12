@@ -1,8 +1,8 @@
 
 # pyenv
 if test -d $HOME/.pyenv
-    set -Ux PYENV_ROOT $HOME/.pyenv
-    set -Ux fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+    set -x PYENV_ROOT $HOME/.pyenv
+    set -g fish_user_paths $PYENV_ROOT/bin $fish_user_paths
     # eval (pyenv init -)
     status --is-interactive; and pyenv init - | source
     status --is-interactive; and pyenv virtualenv-init - | source
@@ -11,8 +11,10 @@ end
 # default editor
 if test -x /usr/bin/nvim
     set -x EDITOR /usr/bin/nvim
+    alias vim='/usr/bin/nvim'
+    alias vi='/usr/bin/vim'
 else
-    set EDITOR /usr/bin/vim
+    set -x EDITOR /usr/bin/vim
 end
 
 ## X11 ##
@@ -20,21 +22,28 @@ set -x DISPLAY localhost:0.0
 set -x LIBGL_ALWAYS_INDIRECT 1
 
 
-## Docker ##
+# ### Docker for Windows in WSL ###
 # TMP
-set -x DOCKER_HOST tcp://0.0.0.0:2375
-alias docker "DOCKER_HOST=$DOCKER_HOST /usr/bin/docker"
+if test -x /usr/bin/wslsys
+    set -x DOCKER_HOST tcp://0.0.0.0:2375
+    alias docker "DOCKER_HOST=$DOCKER_HOST /usr/bin/docker"
+end
 
 
 ## nodejs ##
-set -x NODEJS_HOME $HOME/LocalApps/nodejs
-set -x PATH $NODEJS_HOME/bin:$PATH
+if test -d $HOME/LocalApps/nodejs
+    set -x NODEJS_HOME $HOME/LocalApps/nodejs
+    # set -x PATH $NODEJS_HOME/bin:$PATH
+    set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
+end
 
 ## fzf
 if test -d $HOME/.fzf/bin
-    set -Ux fish_user_paths $HOME/.fzf/bin $fish_user_paths
+    set -g fish_user_paths $HOME/.fzf/bin $fish_user_paths
+    # set -x PATH $HOME/.fzf/bin $PATH
 end
 
 ## user-original ##
-set -x PATH $HOME/bin:$PATH
+# set -x PATH $HOME/bin:$PATH
+set -g fish_user_paths $HOME/bin $fish_user_paths
 

@@ -3,7 +3,9 @@
 " BASIC CONF
 "colorscheme koehler
 " colorschemeの設定前に必要な設定を実施
-source ~/.config/nvim/myutils/before_colorscheme.vim
+if filereadable(expand('~/.config/nvim/myutils/before_colorscheme.vim'))
+    source ~/.config/nvim/myutils/before_colorscheme.vim
+endif
 colorscheme default
 set number  " line number
 "set clipboard=unnamed
@@ -11,6 +13,8 @@ set number  " line number
 set encoding=utf-8
 
 set fileformats=unix,dos,mac
+
+set mouse=a
 
 set autoindent
 set smartindent
