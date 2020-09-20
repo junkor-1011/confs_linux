@@ -4,11 +4,11 @@ repo = 'Shougo/dein.vim'
 
 
 # UI, search
-[[plugins]]
-repo = 'Shougo/denite.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/denite.vim
-'''
+# [[plugins]]
+# repo = 'Shougo/denite.nvim'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/denite.vim
+# '''
 
 [[plugins]]
 repo = 'junegunn/fzf'
