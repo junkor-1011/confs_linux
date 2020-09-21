@@ -249,6 +249,9 @@ repo = 'Shougo/neosnippet-snippets'
 
 [[plugins]]
 repo = 'thomasfaingnaert/vim-lsp-snippets'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
+'''
 
 [[plugins]]
 repo = 'thomasfaingnaert/vim-lsp-neosnippet'
