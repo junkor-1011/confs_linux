@@ -24,6 +24,7 @@ let g:ale_fixers = {
     \ 'python': ['autopep8', 'black', 'isort', 'yapf'],
     \ 'html': ['prettier'],
     \ 'javascript': ['prettier-eslint'],
+    \ 'css': ['prettier', 'stylelint'],
     \ }
 
 " Python
