@@ -37,18 +37,23 @@ elif [ "$1" = "import" ]; then
     rsync -auv ~/$ESLINT_CONFIG_FILENAME ./$ESLINT_CONFIG_FILENAME
     rsync -auv ~/$STYLELINT_CONFIG_FILENAME ./$STYLELINT_CONFIG_FILENAME
 elif [ "$1" = "link" ]; then
+    # tern
     if [ -e ~/$TERN_CONFIG_FILENAME ]; then
         # はじめからsymbolic linkで管理していることを前提
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
         unlink ~/$TERN_CONFIG_FILENAME
     fi
-    ln -s $(pwd)/$ESLINT_CONFIG_FILENAME ~/$ESLINT_CONFIG_FILENAME
+    ln -s $(pwd)/$TERN_CONFIG_FILENAME ~/$TERN_CONFIG_FILENAME
+
+    # eslint
     if [ -e ~/$ESLINT_CONFIG_FILENAME ]; then
         # はじめからsymbolic linkで管理していることを前提
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
         unlink ~/$ESLINT_CONFIG_FILENAME
     fi
-    ln -s $(pwd)/$STYLELINT_CONFIG_FILENAME ~/$STYLELINT_CONFIG_FILENAME
+    ln -s $(pwd)/$ESLINT_CONFIG_FILENAME ~/$ESLINT_CONFIG_FILENAME
+
+    # stylelint
     if [ -e ~/$STYLELINT_CONFIG_FILENAME ]; then
         # はじめからsymbolic linkで管理していることを前提
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
