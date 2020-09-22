@@ -8,6 +8,13 @@ dependencies:
   - nodejs
   - pygments
   - ctags
+  # - pylint
   - python-language-server
-  # - pip:
-  #   - sqlalchemy-views>=0.2
+  - pyls-black
+  - isort
+  - yapf
+  - pip
+  - pip:
+    - pyls-isort
+    - pyls-mypy
+    - jedi-language-server

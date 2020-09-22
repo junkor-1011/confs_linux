@@ -85,6 +85,9 @@ call deoplete#custom#source('TernJS', 'rank', 5000)
 [[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
 on_event = 'InsertEnter'
+hook_source = '''
+source ~/.config/nvim/plugins_dein/deoplete-vim-lsp.vim
+'''
 hook_post_source = '''
 " ToDo
 call deoplete#custom#source('lsp', 'rank', 6000)
