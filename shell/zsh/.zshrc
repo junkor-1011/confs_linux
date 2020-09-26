@@ -47,8 +47,11 @@ bindkey -e  # Emacs
 
 # ---------------------------------- #
 # Plugins
-# using zplug
-if [ -f $HOME/.zsh_local/zplug_setting.zsh ]; then
+if ([ -d $HOME/.zinit ] && [ -f $HOME/.zsh_local/zinit_setting.zsh ]); then
+    # using zinit
+    source $HOME/.zsh_local/zinit_setting.zsh
+elif ([ -d $HOME/.zplug ] && [ -f $HOME/.zsh_local/zplug_setting.zsh ]); then
+    # using zplug
     source $HOME/.zsh_local/zplug_setting.zsh
 fi
 # ---------------------------------- #
