@@ -1,4 +1,22 @@
 
+# anyenv
+if test -d $HOME/.anyenv
+    set -g fish_user_paths $HOME/.anyenv/bin $fish_user_paths
+    eval (anyenv init - fish | source)
+
+    # pyenv
+    if test -d (anyenv root)/envs/pyenv
+        eval (pyenv init - | source)
+        eval (pyenv virtualenv-init - | source)
+        source (pyenv root)/completions/pyenv.fish
+    end
+
+    # nodenv
+    if test -d (anyenv root)/envs/nodenv
+        eval (nodenv init - | source)
+    end
+end
+
 # pyenv
 if test -d $HOME/.pyenv
     set -x PYENV_ROOT $HOME/.pyenv
@@ -24,18 +42,18 @@ set -x LIBGL_ALWAYS_INDIRECT 1
 
 # ### Docker for Windows in WSL ###
 # TMP
-if test -x /usr/bin/wslsys
-    set -x DOCKER_HOST tcp://0.0.0.0:2375
-    alias docker "DOCKER_HOST=$DOCKER_HOST /usr/bin/docker"
-end
+# if test -x /usr/bin/wslsys
+#     set -x DOCKER_HOST tcp://0.0.0.0:2375
+#     alias docker "DOCKER_HOST=$DOCKER_HOST /usr/bin/docker"
+# end
 
 
 ## nodejs ##
-if test -d $HOME/LocalApps/nodejs
-    set -x NODEJS_HOME $HOME/LocalApps/nodejs
-    # set -x PATH $NODEJS_HOME/bin:$PATH
-    set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
-end
+# if test -d $HOME/LocalApps/nodejs
+#     set -x NODEJS_HOME $HOME/LocalApps/nodejs
+#     # set -x PATH $NODEJS_HOME/bin:$PATH
+#     set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
+# end
 
 ## fzf
 if test -d $HOME/.fzf/bin

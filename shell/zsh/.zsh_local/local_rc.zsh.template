@@ -1,4 +1,23 @@
 
+# anyenv
+if [ -d $HOME/.anyenv ]; then
+    # export ANYENV_ROOT="$(anyenv root)"
+    export PATH="$HOME/.anyenv/bin:$PATH"
+    eval "$(anyenv init -)"
+
+    # pyenv
+    if [ -d $(anyenv root)/envs/pyenv ]; then
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+        source $(pyenv root)/completions/pyenv.zsh
+    fi
+
+    # nodenv
+    if [ -d $(anyenv root)/envs/nodenv ]; then
+        eval "$(nodenv init -)"
+    fi
+fi
+
 # pyenv
 if [ -d $HOME/.pyenv ]; then
     export PYENV_ROOT="$HOME/.pyenv"
