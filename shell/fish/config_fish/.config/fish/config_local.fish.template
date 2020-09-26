@@ -37,6 +37,8 @@ end
 
 ## X11 ##
 set -x DISPLAY localhost:0.0
+# for WSL2(need to set system & antivirus software's firewall)
+# set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 set -x LIBGL_ALWAYS_INDIRECT 1
 
 

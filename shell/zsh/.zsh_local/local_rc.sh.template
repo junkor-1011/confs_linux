@@ -10,6 +10,8 @@ fi
 
 ## X11 ##
 export DISPLAY=localhost:0.0
+# for WSL2 (need to set system & antivirus software's firewall)
+# export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export LIBGL_ALWAYS_INDIRECT=1
 
 
