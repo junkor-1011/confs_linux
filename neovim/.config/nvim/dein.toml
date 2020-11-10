@@ -283,6 +283,9 @@ source ~/.config/nvim/plugins_dein/vim-lsp.vim
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
+hook_add = '''
+source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
+'''
 
 [[plugins]]
 repo = 'mattn/vim-lsp-icons'
@@ -322,6 +325,3 @@ repo = 'mattn/vim-lsp-icons'
 
 [[plugins]]
 repo = 'junegunn/goyo.vim'
-
-
-

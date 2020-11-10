@@ -1,29 +1,44 @@
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
-on_event = 'InsertEnter'
+if = "has('nvim')"
+build = ':UpdateRemotePlugins'
+# on_event = 'InsertEnter'
+hook_add = '''
+let g:deoplete#enable_at_startup = 1
+'''
 hook_source = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
 '''
-hook_add = '''
+# hook_add = '''
 
-" 汚いが、OS毎の分岐を作るのは面倒そうなのでここでdeoplete-tabnineも入れてしまう
-" deoplete-tabnine
+# " 汚いが、OS毎の分岐を作るのは面倒そうなのでここでdeoplete-tabnineも入れてしまう
+# " deoplete-tabnine
+# if has('win32') || has('win64')
+#   call dein#add('tbodt/deoplete-tabnine', { 'build': 'powershell.exe .\install.ps1' })
+# else
+#   call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
+# endif
+# '''
+# hook_post_source = '''
+# " ToDo
+# call deoplete#custom#source('TN', 'rank', 120)
+# '''
+# TNではdeopleteのrankを変えられていないかもしれない
+
+[[plugins]]
+repo = 'tbodt/deoplete-tabnine'
+on_event = 'InsertEnter'
+hook_post_update = '''
 if has('win32') || has('win64')
-  call dein#add('tbodt/deoplete-tabnine', { 'build': 'powershell.exe .\install.ps1' })
+  let cmd = 'powershell.exe ./install.ps1'
 else
-  call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
-endif
+  let cmd = './install.sh'
+let g:dein#plugin.build = cmd
 '''
 hook_post_source = '''
 " ToDo
 call deoplete#custom#source('TN', 'rank', 120)
 '''
-# TNではdeopleteのrankを変えられていないかもしれない
-
-# [[plugins]]
-# repo = "davidhalter/jedi-vim"
-# on_ft = ['python']
-
 
 # deoplete-vim-lspがあるが、普通にjediを使う方が現在は安定しそう
 [[plugins]]
@@ -79,6 +94,14 @@ hook_post_source = '''
 call deoplete#custom#source('TernJS', 'rank', 5000)
 '''
 # linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-typescript'
+on_ft = ['typescript']
+
+[[plugins]]
+repo = 'ryanolsonx/vim-lsp-javascript'
+on_ft = ['javascript']
 
 
 # vim-lsp
