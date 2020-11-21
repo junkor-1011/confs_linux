@@ -14,8 +14,10 @@ build = ':UpdateRemotePlugins'
 depends = ['defx-git', 'defx-icons']
 on_cmd = 'Defx'
 hook_add = '''
-source ~/.config/nvim/plugins_dein/defx.vim
 nnoremap <silent> <Leader>f :<C-u> Defx <CR>
+'''
+hook_source = '''
+source ~/.config/nvim/plugins_dein/defx.vim
 '''
 
 # Deoplete
@@ -30,21 +32,6 @@ let g:deoplete#enable_at_startup = 1
 hook_source = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
 '''
-# hook_add = '''
-
-# " 汚いが、OS毎の分岐を作るのは面倒そうなのでここでdeoplete-tabnineも入れてしまう
-# " deoplete-tabnine
-# if has('win32') || has('win64')
-#   call dein#add('tbodt/deoplete-tabnine', { 'build': 'powershell.exe .\install.ps1' })
-# else
-#   call dein#add('tbodt/deoplete-tabnine', { 'build': './install.sh' })
-# endif
-# '''
-# hook_post_source = '''
-# " ToDo
-# call deoplete#custom#source('TN', 'rank', 120)
-# '''
-# TNではdeopleteのrankを変えられていないかもしれない
 
 [[plugins]]
 repo = 'tbodt/deoplete-tabnine'
@@ -157,12 +144,12 @@ call deoplete#custom#source('lsp', 'rank', 6000)
 # '''
 
 # snippets
-repo = 'Shougo/neosnippet.vim'
-on_ft = ['snippet']
-depends = ['neosnippet-snippets']
-hook_post_source = '''
-source ~/.config/nvim/plugins_dein/neosnippet.vim
-'''
+# repo = 'Shougo/neosnippet.vim'
+# on_ft = ['snippet']
+# depends = ['neosnippet-snippets']
+# hook_post_source = '''
+# source ~/.config/nvim/plugins_dein/neosnippet.vim
+# '''
 
 
 # LSP
@@ -218,19 +205,9 @@ source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
 
 [[plugins]]
 repo = 'mattn/vim-lsp-icons'
-on_ft = [
-    'python',
-    'go',
-    'typescript',
-    'javascript',
-    'c',
-    'cpp',
-    'sql',
-    'vue',
-    'sql',
-]
 
 # vista
+[[plugins]]
 repo = 'liuchengxu/vista.vim'
 on_cmd = ['Vista']
 hook_add = '''
