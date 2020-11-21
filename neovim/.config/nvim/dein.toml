@@ -67,33 +67,8 @@ repo = 'luochen1990/rainbow'
 
 # File Tree
 
-## Defx
-# [[plugins]]
-# repo = 'Shougo/defx.nvim'
-# hook_add = '''
-# source ~/.config/nvim/plugins_dein/defx.vim
-# nnoremap <silent> <Leader>f :<C-u> Defx <CR>
-# '''
-
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
-
-# [[plugins]]
-# repo = 'kristijanhusak/defx-icons'
-
-# [[plugins]]
-# repo = 'kristijanhusak/defx-git'
-
-# `defx`使用のため、一旦disable
-## NERDTree
-# [[plugins]]
-# repo = 'preservim/nerdtree'
-# hook_add = '''
-# nnoremap <silent><C-e> :NERDTreeToggle<CR>
-# '''
-
-# [[plugins]]
-# repo = 'Xuyuanp/nerdtree-git-plugin'
 
 # launch
 [[plugins]]
