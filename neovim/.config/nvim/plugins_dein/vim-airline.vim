@@ -7,4 +7,3 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#tabline#fnamemod = ':t'
 "let g:airline_statusline_ontop=1
 
-

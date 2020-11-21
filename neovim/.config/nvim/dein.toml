@@ -68,21 +68,21 @@ repo = 'luochen1990/rainbow'
 # File Tree
 
 ## Defx
-[[plugins]]
-repo = 'Shougo/defx.nvim'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/defx.vim
-nnoremap <silent> <Leader>f :<C-u> Defx <CR>
-'''
+# [[plugins]]
+# repo = 'Shougo/defx.nvim'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/defx.vim
+# nnoremap <silent> <Leader>f :<C-u> Defx <CR>
+# '''
 
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
-[[plugins]]
-repo = 'kristijanhusak/defx-icons'
+# [[plugins]]
+# repo = 'kristijanhusak/defx-icons'
 
-[[plugins]]
-repo = 'kristijanhusak/defx-git'
+# [[plugins]]
+# repo = 'kristijanhusak/defx-git'
 
 # `defx`使用のため、一旦disable
 ## NERDTree
@@ -116,6 +116,10 @@ endif
 # Git
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
+hook_add = '''
+nmap ]g <Plug>(GitGutterNextHunk)
+nmap [g <Plug>(GitGutterPrevHunk)
+'''
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
@@ -181,7 +185,6 @@ repo = 'sheerun/vim-polyglot'
 
 ## Syntax checker
 [[plugins]]
-# repo = 'w0rp/ale'
 repo = 'dense-analysis/ale'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/ale.vim
@@ -204,10 +207,10 @@ nmap <F8> :TagbarToggle<CR>
 
 # errorが出るがとりあえず無視
 [[plugins]]
-repo = 'liuchengxu/vista.vim'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/vista.vim
-'''
+# repo = 'liuchengxu/vista.vim'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/vista.vim
+# '''
 
 [[plugins]]
 repo = 'jacquesbh/vim-showmarks'
@@ -244,17 +247,17 @@ hook_add = '''
 
 
 # snippet
-[[plugins]]
-repo = 'Shougo/neosnippet-snippets'
+# [[plugins]]
+# repo = 'Shougo/neosnippet-snippets'
 
-[[plugins]]
-repo = 'thomasfaingnaert/vim-lsp-snippets'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
-'''
 
-[[plugins]]
-repo = 'thomasfaingnaert/vim-lsp-neosnippet'
+# repo = 'thomasfaingnaert/vim-lsp-snippets'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
+# '''
+
+# [[plugins]]
+# repo = 'thomasfaingnaert/vim-lsp-neosnippet'
 
 # Gundo
 [[plugins]]
@@ -275,20 +278,20 @@ nnoremap <Leader><F5> :GundoToggle<CR>
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
 
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/vim-lsp.vim
-'''
+# [[plugins]]
+# repo = 'prabirshrestha/vim-lsp'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/vim-lsp.vim
+# '''
 
-[[plugins]]
-repo = 'mattn/vim-lsp-settings'
-hook_add = '''
-source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
-'''
+# [[plugins]]
+# repo = 'mattn/vim-lsp-settings'
+# hook_add = '''
+# source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
+# '''
 
-[[plugins]]
-repo = 'mattn/vim-lsp-icons'
+# [[plugins]]
+# repo = 'mattn/vim-lsp-icons'
 
 # [[plugins]]
 # repo = 'hrsh7th/vim-vsnip'
