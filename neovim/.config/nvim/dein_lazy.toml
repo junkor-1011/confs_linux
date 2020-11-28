@@ -78,6 +78,10 @@ on_ft = ['python']
 # repo = 'lambdalisue/vim-pyenv'
 # on_ft = ['python']
 
+[[plugins]]
+repo = 'lambdalisue/vim-django-support'
+on_ft = ['python', 'djangohtml']
+
 
 # zsh
 [[plugins]]
