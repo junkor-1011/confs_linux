@@ -25,6 +25,7 @@ source ~/.config/nvim/plugins_dein/defx.vim
 repo = 'Shougo/deoplete.nvim'
 if = "has('nvim')"
 build = ':UpdateRemotePlugins'
+depends = ['ultisnips']
 # on_event = 'InsertEnter'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
@@ -155,6 +156,30 @@ call deoplete#custom#source('lsp', 'rank', 6000)
 # source ~/.config/nvim/plugins_dein/neosnippet.vim
 # '''
 
+[[plugins]]
+repo = 'SirVer/ultisnips'
+depends = ['vim-snippets']
+hook_add = '''
+    let g:UltiSnipsExpandTrigger="<c-k>"
+    let g:UltiSnipsJumpForwardTrigger="<c-k>"
+    let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+'''
+
+[[plugins]]
+repo = 'honza/vim-snippets'
+
+[[plugins]]
+repo = 'Shougo/neco-vim'
+if = "has('nvim')"
+on_ft = ['vim']
+depends = ['deoplete.nvim']
+
+[[plugins]]
+repo = 'ujihisa/neco-look'
+if = "has('nvim')"
+on_ft = ['gitcommit', 'markdown']
+depends = ['deoplete.nvim']
+
 
 # LSP
 [[plugins]]
@@ -168,7 +193,6 @@ on_ft = [
     'cpp',
     'sql',
     'vue',
-    'sql',
 ]
 depends = [
     'deoplete-vim-lsp',
@@ -181,14 +205,6 @@ depends = [
 hook_source = '''
 source ~/.config/nvim/plugins_dein/vim-lsp.vim
 '''
-
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['typescript']
-
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-javascript'
-on_ft = ['javascript']
 
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
