@@ -268,11 +268,11 @@ hook_add = '''
 [[plugins]]
 repo = 'osyo-manga/vim-precious'
 depends = ['context_filetype.vim']
-on_ft = ['toml']
+on_ft = ['html', 'djangohtml', 'toml']
 
 [[plugins]]
 repo = 'Shougo/context_filetype.vim'
-on_ft = ['markdown', 'toml', 'help']
+on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 
 
 # commentary
