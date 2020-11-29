@@ -21,18 +21,18 @@ build = './install --bin'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 
-[[plugins]]
-repo = 'mileszs/ack.vim'
+# [[plugins]]
+# repo = 'mileszs/ack.vim'
 
 [[plugins]]
 repo = 'will133/vim-dirdiff'
 
 # terminal
-[[plugins]]
-repo = "shougo/deol.nvim"
-hook_add = """
-source ~/.config/nvim/plugins_dein/deol.vim
-"""
+# [[plugins]]
+# repo = "shougo/deol.nvim"
+# hook_add = """
+# source ~/.config/nvim/plugins_dein/deol.vim
+# """
 
 ## Themes, StatusLine, Visualization
 
@@ -218,14 +218,7 @@ hook_add = '''
 
 
 # snippet
-# [[plugins]]
-# repo = 'Shougo/neosnippet-snippets'
-
-
 # repo = 'thomasfaingnaert/vim-lsp-snippets'
-# hook_add = '''
-# source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
-# '''
 
 # [[plugins]]
 # repo = 'thomasfaingnaert/vim-lsp-neosnippet'
@@ -249,20 +242,6 @@ nnoremap <Leader><F5> :GundoToggle<CR>
 [[plugins]]
 repo = 'prabirshrestha/async.vim'
 
-# [[plugins]]
-# repo = 'prabirshrestha/vim-lsp'
-# hook_add = '''
-# source ~/.config/nvim/plugins_dein/vim-lsp.vim
-# '''
-
-# [[plugins]]
-# repo = 'mattn/vim-lsp-settings'
-# hook_add = '''
-# source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
-# '''
-
-# [[plugins]]
-# repo = 'mattn/vim-lsp-icons'
 
 # [[plugins]]
 # repo = 'hrsh7th/vim-vsnip'
@@ -279,10 +258,6 @@ repo = 'prabirshrestha/async.vim'
 # depends = ['vim-lsp']
 
 
-# tabnine (AI)
-# [[plugins]]
-# repo = 'codota/tabnine-vim'
-
 # DEBUG
 # need to create `$PROJECT_DIR/.vimspector.json`
 # [[plugins]]
@@ -292,7 +267,6 @@ repo = 'prabirshrestha/async.vim'
 # hook_add = '''
 # source ~/.config/nvim/plugins_dein/vimspector.vim
 # '''
-
 
 
 # Others ------

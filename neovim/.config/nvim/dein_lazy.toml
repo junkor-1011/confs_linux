@@ -272,6 +272,7 @@ on_ft = ['markdown', 'toml', 'help']
 repo = 'tpope/vim-commentary'
 on_cmd = ['Commentary', 'CommentaryLine']
 hook_add = '''
+" ToDo: instable setting, often to execute 'Commentary' directly at first.
 nmap <C-_> <Plug>CommentaryLine
 vmap <C-_> <Plug>Commentary
 '''
@@ -301,3 +302,17 @@ elseif exists('*ch_close_in')
   let g:quickrun_config._.runner = 'job'
 endif
 '''
+
+## grep
+[[plugins]]
+repo = 'mileszs/ack.vim'
+on_cmd = ['Ack', 'AckAdd', 'AckFormSearch', 'LAck', 'LAckAdd', 'AckFile', 'AckHelp', 'LAckHelp', 'AckWindow', 'LAckWindow']
+
+
+# terminal
+[[plugins]]
+repo = "shougo/deol.nvim"
+on_cmd = ['Deol']
+hook_source = """
+source ~/.config/nvim/plugins_dein/deol.vim
+"""
