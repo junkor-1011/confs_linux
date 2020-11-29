@@ -1,6 +1,6 @@
 # Package Magager
-[[plugins]]
-repo = 'Shougo/dein.vim'
+# [[plugins]]
+# repo = 'Shougo/dein.vim'
 
 
 # UI, search
@@ -21,18 +21,10 @@ build = './install --bin'
 repo = 'junegunn/fzf.vim'
 depends = 'fzf'
 
-# [[plugins]]
-# repo = 'mileszs/ack.vim'
 
 [[plugins]]
 repo = 'will133/vim-dirdiff'
 
-# terminal
-# [[plugins]]
-# repo = "shougo/deol.nvim"
-# hook_add = """
-# source ~/.config/nvim/plugins_dein/deol.vim
-# """
 
 ## Themes, StatusLine, Visualization
 
@@ -176,13 +168,6 @@ hook_add = '''
 nmap <F8> :TagbarToggle<CR>
 '''
 
-# errorが出るがとりあえず無視
-[[plugins]]
-# repo = 'liuchengxu/vista.vim'
-# hook_add = '''
-# source ~/.config/nvim/plugins_dein/vista.vim
-# '''
-
 [[plugins]]
 repo = 'jacquesbh/vim-showmarks'
 
@@ -224,12 +209,12 @@ hook_add = '''
 # repo = 'thomasfaingnaert/vim-lsp-neosnippet'
 
 # Gundo
-[[plugins]]
-repo = 'sjl/gundo.vim'
-hook_add = '''
-let g:gundo_prefer_python3 = 1
-nnoremap <Leader><F5> :GundoToggle<CR>
-'''
+# [[plugins]]
+# repo = 'sjl/gundo.vim'
+# hook_add = '''
+# let g:gundo_prefer_python3 = 1
+# nnoremap <Leader><F5> :GundoToggle<CR>
+# '''
 
 # DEBUG
 # TMP
