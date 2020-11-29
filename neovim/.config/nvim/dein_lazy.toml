@@ -275,3 +275,29 @@ hook_add = '''
 nmap <C-_> <Plug>CommentaryLine
 vmap <C-_> <Plug>Commentary
 '''
+
+# quick-run
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+on_cmd = ['QuickRun']
+depends = ['vim-quickrun-neovim-job']
+hook_add = '''
+    nnoremap <Leader>r :<C-U>QuickRun<CR>
+    xnoremap <Leader>r gv:<C-U>QuickRun<CR>
+'''
+# hook_source = '''
+# '''
+
+[[plugins]]
+repo = 'lambdalisue/vim-quickrun-neovim-job'
+hook_source = '''
+let g:quickrun_config = {'_': {}}
+
+if has('nvim')
+  " Use 'neovim_job' in Neovim
+  let g:quickrun_config._.runner = 'neovim_job'
+elseif exists('*ch_close_in')
+  " Use 'job' in Vim which support job feature
+  let g:quickrun_config._.runner = 'job'
+endif
+'''
