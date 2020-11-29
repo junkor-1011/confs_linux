@@ -98,26 +98,6 @@ repo = 'Townk/vim-autoclose'
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
-## HTML, XML, ...
-[[plugins]]
-repo = 'alvan/vim-closetag'
-hook_add = '''
-let g:closetag_regions = {
-    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
-    \ 'javascript.jsx': 'jsxRegion',
-    \ }
-
-" Shortcut for closing tags, default is '>'
-"
-let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-"
-let g:closetag_close_shortcut = '<leader>>'
-'''
-
-[[plugins]]
-repo = 'mattn/emmet-vim'
 
 ## trailing-whitespace
 [[plugins]]

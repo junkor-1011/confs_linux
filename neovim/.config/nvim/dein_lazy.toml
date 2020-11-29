@@ -368,6 +368,20 @@ hook_add = '''
 '''
 
 
+## HTML, XML, ...
+[[plugins]]
+repo = 'alvan/vim-closetag'
+on_ft = ['html', 'djangohtml', 'javascript', 'typescript', 'typescriptreact']
+hook_source = '''
+source ~/.config/nvim/plugins_dein/vim-closetag.vim
+'''
+
+[[plugins]]
+repo = 'mattn/emmet-vim'
+on_ft = ['html', 'djangohtml', 'css', 'javascript', 'typescript', 'typescriptreact']
+
+
+
 # terminal
 [[plugins]]
 repo = "shougo/deol.nvim"
