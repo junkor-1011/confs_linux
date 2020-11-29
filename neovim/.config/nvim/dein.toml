@@ -10,10 +10,6 @@
 # source ~/.config/nvim/plugins_dein/denite.vim
 # '''
 
-# [[plugins]]
-# repo = 'will133/vim-dirdiff'
-
-
 ## Themes, StatusLine, Visualization
 
 # statusline plugin
@@ -105,6 +101,12 @@ repo = 'jiangmiao/auto-pairs'
 ## HTML, XML, ...
 [[plugins]]
 repo = 'alvan/vim-closetag'
+hook_add = '''
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
+'''
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
