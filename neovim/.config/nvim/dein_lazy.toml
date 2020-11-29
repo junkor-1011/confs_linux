@@ -376,6 +376,11 @@ source ~/.config/nvim/plugins_dein/deol.vim
 
 ## Other Utils ##
 
+# DirDiff
+[[plugins]]
+repo = 'will133/vim-dirdiff'
+on_cmd = ['DirDiff']
+
 # Gundo
 [[plugins]]
 repo = 'sjl/gundo.vim'
@@ -438,6 +443,17 @@ repo = 'Yggdroot/indentLine'
 on_cmd = ['IndentLinesToggle']
 hook_add = '''
     nnoremap <silent> <Leader>i :<C-u>IndentLinesToggle<CR>
+'''
+
+[[plugins]]
+repo = 'junegunn/vim-easy-align'
+on_cmd = ['EasyAlign']
+hook_add = '''
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 '''
 
 [[plugins]]

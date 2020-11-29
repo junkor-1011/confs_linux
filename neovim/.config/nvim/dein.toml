@@ -11,19 +11,7 @@
 # '''
 
 # [[plugins]]
-# repo = 'junegunn/fzf'
-# build = './install --bin'
-#build_on = '''
-#./install -all
-#'''
-
-# [[plugins]]
-# repo = 'junegunn/fzf.vim'
-# depends = 'fzf'
-
-
-[[plugins]]
-repo = 'will133/vim-dirdiff'
+# repo = 'will133/vim-dirdiff'
 
 
 ## Themes, StatusLine, Visualization
