@@ -125,8 +125,12 @@ vmap <C-v> <Plug>(expand_region_shrink)
 #repo = 'ervandew/supertab'
 
 ## commentry
-[[plugins]]
-repo = 'tpope/vim-commentary'
+# [[plugins]]
+# repo = 'tpope/vim-commentary'
+# hook_add = '''
+# nmap <C-_> <Plug>CommentaryLine
+# vmap <C-_> <Plug>Commentary
+# '''
 
 ## repeat
 [[plugins]]
