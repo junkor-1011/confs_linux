@@ -62,23 +62,6 @@ repo = 'luochen1990/rainbow'
 [[plugins]]
 repo = 'ryanoasis/vim-devicons'
 
-# launch
-# [[plugins]]
-# repo = 'thinca/vim-quickrun'
-
-# [[plugins]]
-# repo = 'lambdalisue/vim-quickrun-neovim-job'
-# hook_add = '''
-# let g:quickrun_config = {'_': {}}
-
-# if has('nvim')
-#   " Use 'neovim_job' in Neovim
-#   let g:quickrun_config._.runner = 'neovim_job'
-# elseif exists('*ch_close_in')
-#   " Use 'job' in Vim which support job feature
-#   let g:quickrun_config._.runner = 'job'
-# endif
-# '''
 
 # Git
 [[plugins]]
@@ -207,14 +190,6 @@ hook_add = '''
 
 # [[plugins]]
 # repo = 'thomasfaingnaert/vim-lsp-neosnippet'
-
-# Gundo
-# [[plugins]]
-# repo = 'sjl/gundo.vim'
-# hook_add = '''
-# let g:gundo_prefer_python3 = 1
-# nnoremap <Leader><F5> :GundoToggle<CR>
-# '''
 
 # DEBUG
 # TMP
