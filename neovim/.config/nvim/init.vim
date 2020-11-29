@@ -229,3 +229,8 @@ endif
 
 "End dein Scripts-------------------------
 
+" settings
+source ~/.config/nvim/myutils/mappings.rc.vim
+source ~/.config/nvim/myutils/options.rc.vim
+source ~/.config/nvim/myutils/filetype.rc.vim
+source ~/.config/nvim/myutils/autocmd.rc.vim

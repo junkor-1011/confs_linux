@@ -3,7 +3,7 @@
 autocmd FileType defx call s:defx_my_settings()
 function! s:defx_my_settings() abort
   nnoremap <silent><buffer><expr> <CR>
-   \ defx#do_action('drop')
+  \ defx#do_action('drop')
   nnoremap <silent><buffer><expr> c
   \ defx#do_action('copy')
   nnoremap <silent><buffer><expr> m
@@ -81,3 +81,4 @@ call defx#custom#option('_', {
 autocmd BufWritePost * call defx#redraw()
 autocmd BufEnter * call defx#redraw()
 
+" nnoremap <silent> <Leader>f :<C-u> Defx <CR>
