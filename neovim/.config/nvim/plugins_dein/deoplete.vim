@@ -32,3 +32,7 @@ let s:use_lsp_sources = ['lsp', 'dictionary', 'file']
 "     \ 'typescriptreact': s:use_lsp_sources,
 "     \ 'vim': ['vim', 'buffer', 'dictionary', 'file'],
 "     \})
+
+" disable prev window
+set completeopt-=preview
+autocmd CompleteDone * silent! plose!
