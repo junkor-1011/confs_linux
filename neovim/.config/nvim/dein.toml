@@ -10,16 +10,16 @@
 # source ~/.config/nvim/plugins_dein/denite.vim
 # '''
 
-[[plugins]]
-repo = 'junegunn/fzf'
-build = './install --bin'
+# [[plugins]]
+# repo = 'junegunn/fzf'
+# build = './install --bin'
 #build_on = '''
 #./install -all
 #'''
 
-[[plugins]]
-repo = 'junegunn/fzf.vim'
-depends = 'fzf'
+# [[plugins]]
+# repo = 'junegunn/fzf.vim'
+# depends = 'fzf'
 
 
 [[plugins]]
@@ -225,8 +225,3 @@ repo = 'prabirshrestha/async.vim'
 # template
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
-
-# Others ------
-
-[[plugins]]
-repo = 'junegunn/goyo.vim'

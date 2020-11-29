@@ -311,10 +311,59 @@ elseif exists('*ch_close_in')
 endif
 '''
 
+## Fuzzy Finder
+[[plugins]]
+repo = 'junegunn/fzf'
+build = './install --all'
+
+[[plugins]]
+repo = 'junegunn/fzf.vim'
+depends = ['fzf', 'fzf-mru.vim']
+on_cmd = [
+    'FZF',
+    'Files',
+    'GFiles',
+    'Buffers',
+    'Colors',
+    'Ag',
+    'Rg',
+    'Lines',
+    'BLines',
+    'Tags',
+    'BTags',
+    'Marks',
+    'Windows',
+    'Locate',
+    'History',
+    'Snippets',
+    'BCommits',
+    'Commands',
+    'Maps',
+    'Helptags',
+    'Filetypes',
+    'FZFMru',
+]
+
+[[plugins]]
+repo = 'pbogut/fzf-mru.vim'
+
 ## grep
 [[plugins]]
 repo = 'mileszs/ack.vim'
 on_cmd = ['Ack', 'AckAdd', 'AckFormSearch', 'LAck', 'LAckAdd', 'AckFile', 'AckHelp', 'LAckHelp', 'AckWindow', 'LAckWindow']
+
+
+# SQL Format
+[[plugins]]
+repo = 'mattn/vim-sqlfmt'
+on_ft = ['sql']
+on_map = ['<Plug>(sqlfmt)']
+on_cmd = ['SQLFmt']
+hook_add = '''
+    " Install command `pip install sqlparse`
+    let sqlfmt_bin = fnamemodify(g:python3_host_prog, ':h') . '/'. 'sqlformat'
+    let g:sqlfmt_program = sqlfmt_bin . ' -r -k upper -o %s -'
+'''
 
 
 # terminal
@@ -325,6 +374,8 @@ hook_source = """
 source ~/.config/nvim/plugins_dein/deol.vim
 """
 
+## Other Utils ##
+
 # Gundo
 [[plugins]]
 repo = 'sjl/gundo.vim'
@@ -333,3 +384,90 @@ hook_add = '''
 let g:gundo_prefer_python3 = 1
 nnoremap <Leader><F5> :GundoToggle<CR>
 '''
+
+[[plugins]]
+repo = 'kannokanno/previm'
+depends = ['open-browser.vim']
+on_cmd = ['PrevimOpen']
+hook_add = '''
+    " nnoremap <leader>p :PrevimOpen<CR>
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser.vim'
+on_map = ['<Plug>(openbrowser-smart-search)']
+hook_add = '''
+    let g:netrw_nogx = 1 " disable netrw's gx mapping.
+    nmap <Leader>bb <Plug>(openbrowser-smart-search)
+    vmap <Leader>bb <Plug>(openbrowser-smart-search)
+'''
+
+[[plugins]]
+repo = 'tyru/open-browser-github.vim'
+depends = ['open-browser.vim']
+on_cmd = ['OpenGithubFile']
+# hook_add = '''
+#     nmap <Leader>bh :<C-u>OpenGithubFile<CR>
+#     vmap <Leader>bh :<C-u>OpenGithubFile<CR>
+# '''
+
+[[plugins]]
+repo = 'iberianpig/tig-explorer.vim'
+on_cmd = [
+    'TigStatus',
+    'TigOpenCurrentFile',
+]
+# hook_add = '''
+#     nnoremap <silent> <Leader>s :<C-u>TigStatus<CR>
+#     nnoremap <silent> <Leader>k :<C-u>TigOpenCurrentFile<CR>
+# '''
+
+# Git-Messenger
+[[plugins]]
+repo = 'rhysd/git-messenger.vim'
+on_cmd = ['GitMessenger']
+on_map = '<Plug>(git-messenger'
+
+
+[[plugins]]
+repo = 'nicwest/vim-camelsnek'
+on_cmd = ['Camel', 'CamelB', 'Snek', 'Kebab']
+
+[[plugins]]
+repo = 'Yggdroot/indentLine'
+on_cmd = ['IndentLinesToggle']
+hook_add = '''
+    nnoremap <silent> <Leader>i :<C-u>IndentLinesToggle<CR>
+'''
+
+[[plugins]]
+repo = 'vim-test/vim-test'
+on_cmd = [
+    'TestNearest',
+    'TestFile',
+    'TestSuite',
+    'TestLast',
+    'TestVisit',
+]
+depends = ['tpope/vim-dispatch']
+hook_add = '''
+    let g:test#strategy = "dispatch"
+    nnoremap <silent> <Leader>tt :TestNearest<CR>
+    nnoremap <silent> <Leader>tf :TestFile<CR>
+    nnoremap <silent> <Leader>ts :TestSuite<CR>
+    nnoremap <silent> <Leader>tl :TestLast<CR>
+    nnoremap <silent> <Leader>tv :TestVisit<CR>
+'''
+
+[[plugins]]
+repo = 'tpope/vim-dispatch'
+
+# Others ------
+
+[[plugins]]
+repo = 'junegunn/goyo.vim'
+on_ft = ['markdown']
+depends = ['limelight.vim']
+
+[[plugins]]
+repo = 'junegunn/limelight.vim'
