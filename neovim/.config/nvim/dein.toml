@@ -185,12 +185,6 @@ hook_add = '''
 # '''
 
 
-# snippet
-# repo = 'thomasfaingnaert/vim-lsp-snippets'
-
-# [[plugins]]
-# repo = 'thomasfaingnaert/vim-lsp-neosnippet'
-
 # DEBUG
 # TMP
 # [[plugins]]
@@ -228,6 +222,9 @@ repo = 'prabirshrestha/async.vim'
 # source ~/.config/nvim/plugins_dein/vimspector.vim
 # '''
 
+# template
+[[plugins]]
+repo = 'mattn/sonictemplate-vim'
 
 # Others ------
 
