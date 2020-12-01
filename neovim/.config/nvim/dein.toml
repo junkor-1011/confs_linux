@@ -92,16 +92,12 @@ repo = 'tpope/vim-repeat'
 repo = 'tpope/vim-surround'
 
 ## bracket
-[[plugins]]
-repo = 'Townk/vim-autoclose'
+# [[plugins]]
+# repo = 'Townk/vim-autoclose'
 
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
 
-
-## trailing-whitespace
-[[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
 
 ## syntax
 [[plugins]]
@@ -113,10 +109,6 @@ repo = 'dense-analysis/ale'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/ale.vim
 '''
-
-# https://github.com/vim-syntastic/syntastic
-# [[plugins]]
-# repo = 'scrooloose/syntastic'
 
 ## mark, tag
 [[plugins]]

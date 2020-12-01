@@ -494,6 +494,18 @@ hook_add = '''
 [[plugins]]
 repo = 'tpope/vim-dispatch'
 
+
+## trailing-whitespace
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+on_cmd = ['FixWhitespace']
+
+## bracket
+[[plugins]]
+repo = 'jiangmiao/auto-pairs'
+on_event = 'InsertEnter'
+
+
 # Others ------
 
 [[plugins]]
