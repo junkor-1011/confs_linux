@@ -506,6 +506,16 @@ repo = 'jiangmiao/auto-pairs'
 on_event = 'InsertEnter'
 
 
+## visual expand
+[[plugins]]
+repo = 'terryma/vim-expand-region'
+on_event = 'VisualEnter'
+hook_add = '''
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+'''
+
+
 # Others ------
 
 [[plugins]]

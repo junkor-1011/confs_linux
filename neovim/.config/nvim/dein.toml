@@ -72,12 +72,12 @@ source ~/.config/nvim/plugins_dein/anzu.vim
 '''
 
 ## visual expand
-[[plugins]]
-repo = 'terryma/vim-expand-region'
-hook_add = '''
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
-'''
+# [[plugins]]
+# repo = 'terryma/vim-expand-region'
+# hook_add = '''
+# vmap v <Plug>(expand_region_expand)
+# vmap <C-v> <Plug>(expand_region_shrink)
+# '''
 
 ## tab
 #[[plugins]]
@@ -92,9 +92,6 @@ repo = 'tpope/vim-repeat'
 repo = 'tpope/vim-surround'
 
 ## bracket
-# [[plugins]]
-# repo = 'Townk/vim-autoclose'
-
 # [[plugins]]
 # repo = 'jiangmiao/auto-pairs'
 
