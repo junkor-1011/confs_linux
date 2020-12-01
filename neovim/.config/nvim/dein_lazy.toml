@@ -287,6 +287,12 @@ on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 # vmap gc <Plug>Commentary
 # vmap <C-_> <Plug>Commentary
 # '''
+# [[plugins]]
+# repo = 'tyru/caw.vim'
+# hook_add = '''
+# nmap <C-_> gcc
+# xmap <C-_> gcc
+# '''
 
 # quick-run
 [[plugins]]
