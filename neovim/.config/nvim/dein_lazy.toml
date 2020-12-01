@@ -98,14 +98,14 @@ on_ft = 'zsh'
 
 # javascript
 # deoplete-vim-lspがあるが、ternjsの方が有効なこともまだ多そうな感じ
-[[plugins]]
-repo = 'carlitux/deoplete-ternjs'
-on_ft = 'javascript'
-build = 'npm install -g tern'
-hook_post_source = '''
-" ToDO
-call deoplete#custom#source('TernJS', 'rank', 5000)
-'''
+# [[plugins]]
+# repo = 'carlitux/deoplete-ternjs'
+# on_ft = 'javascript'
+# build = 'npm install -g tern'
+# hook_post_source = '''
+# " ToDO
+# call deoplete#custom#source('TernJS', 'rank', 5000)
+# '''
 # linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
 
 [[plugins]]
