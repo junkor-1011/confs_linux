@@ -278,15 +278,15 @@ on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 
 
 # commentary
-[[plugins]]
-repo = 'tpope/vim-commentary'
-on_cmd = ['Commentary', 'CommentaryLine']
-hook_add = '''
-nmap gcc <Plug>CommentaryLine
-nmap <C-_> <Plug>CommentaryLine
-vmap gc <Plug>Commentary
-vmap <C-_> <Plug>Commentary
-'''
+# [[plugins]]
+# repo = 'tpope/vim-commentary'
+# on_cmd = ['Commentary', 'CommentaryLine']
+# hook_add = '''
+# nmap gcc <Plug>CommentaryLine
+# nmap <C-_> <Plug>CommentaryLine
+# vmap gc <Plug>Commentary
+# vmap <C-_> <Plug>Commentary
+# '''
 
 # quick-run
 [[plugins]]

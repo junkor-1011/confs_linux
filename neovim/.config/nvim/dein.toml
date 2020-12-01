@@ -84,6 +84,23 @@ repo = 'tpope/vim-repeat'
 repo = 'tpope/vim-surround'
 
 
+# commentary
+# [[plugins]]
+# repo = 'tpope/vim-commentary'
+# hook_add = '''
+# nmap gcc <Plug>CommentaryLine
+# nmap <C-_> <Plug>CommentaryLine
+# vmap gc <Plug>Commentary
+# vmap <C-_> <Plug>Commentary
+# '''
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+hook_add = '''
+nmap <C-_> gcc
+xmap <C-_> gcc
+'''
+
 ## syntax
 [[plugins]]
 repo = 'sheerun/vim-polyglot'
