@@ -282,8 +282,9 @@ on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 repo = 'tpope/vim-commentary'
 on_cmd = ['Commentary', 'CommentaryLine']
 hook_add = '''
-" ToDo: instable setting, often to execute 'Commentary' directly at first.
+nmap gcc <Plug>CommentaryLine
 nmap <C-_> <Plug>CommentaryLine
+vmap gc <Plug>Commentary
 vmap <C-_> <Plug>Commentary
 '''
 
