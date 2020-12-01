@@ -515,6 +515,11 @@ vmap v <Plug>(expand_region_expand)
 vmap <C-v> <Plug>(expand_region_shrink)
 '''
 
+## block
+[[plugins]]
+repo = 'tpope/vim-endwise'
+on_event = 'InsertEnter'
+
 
 # Others ------
 

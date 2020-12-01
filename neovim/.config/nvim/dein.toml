@@ -61,8 +61,8 @@ repo = 'tpope/vim-fugitive'
 # editor utils
 
 ## block
-[[plugins]]
-repo = 'tpope/vim-endwise'
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
 
 ## Search
 [[plugins]]
@@ -70,14 +70,6 @@ repo = 'osyo-manga/vim-anzu'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/anzu.vim
 '''
-
-## visual expand
-# [[plugins]]
-# repo = 'terryma/vim-expand-region'
-# hook_add = '''
-# vmap v <Plug>(expand_region_expand)
-# vmap <C-v> <Plug>(expand_region_shrink)
-# '''
 
 ## tab
 #[[plugins]]
@@ -90,10 +82,6 @@ repo = 'tpope/vim-repeat'
 ## surround
 [[plugins]]
 repo = 'tpope/vim-surround'
-
-## bracket
-# [[plugins]]
-# repo = 'jiangmiao/auto-pairs'
 
 
 ## syntax
