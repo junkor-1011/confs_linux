@@ -508,9 +508,9 @@ repo = 'bronson/vim-trailing-whitespace'
 on_cmd = ['FixWhitespace']
 
 ## bracket
-[[plugins]]
-repo = 'jiangmiao/auto-pairs'
-on_event = 'InsertEnter'
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
+# on_event = 'InsertEnter'
 
 
 ## visual expand
@@ -523,9 +523,9 @@ on_event = 'InsertEnter'
 # '''
 
 ## block
-[[plugins]]
-repo = 'tpope/vim-endwise'
-on_event = 'InsertEnter'
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
+# on_event = 'InsertEnter'
 
 
 # Others ------
