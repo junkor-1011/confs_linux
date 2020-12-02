@@ -34,6 +34,9 @@ HISTFILE=$HOME/.zsh_history
 HISTSIZE=30000
 SAVEHIST=30000
 setopt hist_ignore_dups
+setopt hist_ignore_all_dups
+setopt hist_reduce_blanks
+setopt hist_ignore_space
 setopt share_history
 
 # execute command

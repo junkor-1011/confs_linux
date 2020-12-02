@@ -61,22 +61,14 @@ repo = 'tpope/vim-fugitive'
 # editor utils
 
 ## block
-[[plugins]]
-repo = 'tpope/vim-endwise'
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
 
 ## Search
 [[plugins]]
 repo = 'osyo-manga/vim-anzu'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/anzu.vim
-'''
-
-## visual expand
-[[plugins]]
-repo = 'terryma/vim-expand-region'
-hook_add = '''
-vmap v <Plug>(expand_region_expand)
-vmap <C-v> <Plug>(expand_region_shrink)
 '''
 
 ## tab
@@ -91,17 +83,31 @@ repo = 'tpope/vim-repeat'
 [[plugins]]
 repo = 'tpope/vim-surround'
 
-## bracket
-[[plugins]]
-repo = 'Townk/vim-autoclose'
 
+# [[plugins]]
+repo = 'tyru/caw.vim'
+hook_add = '''
+nmap <C-_> gcc
+xmap <C-_> gcc
+" ToDo: move to dein_lazy
+'''
+
+## bracket
 [[plugins]]
 repo = 'jiangmiao/auto-pairs'
 
-
-## trailing-whitespace
+## visual expand
 [[plugins]]
-repo = 'bronson/vim-trailing-whitespace'
+repo = 'terryma/vim-expand-region'
+hook_add = '''
+vmap v <Plug>(expand_region_expand)
+vmap <C-v> <Plug>(expand_region_shrink)
+" ToDo: move to dein_lazy
+'''
+
+[[plugins]]
+repo = 'tpope/vim-endwise'
+
 
 ## syntax
 [[plugins]]
@@ -113,10 +119,6 @@ repo = 'dense-analysis/ale'
 hook_add = '''
 source ~/.config/nvim/plugins_dein/ale.vim
 '''
-
-# https://github.com/vim-syntastic/syntastic
-# [[plugins]]
-# repo = 'scrooloose/syntastic'
 
 ## mark, tag
 [[plugins]]

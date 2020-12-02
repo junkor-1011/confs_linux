@@ -98,14 +98,14 @@ on_ft = 'zsh'
 
 # javascript
 # deoplete-vim-lspがあるが、ternjsの方が有効なこともまだ多そうな感じ
-[[plugins]]
-repo = 'carlitux/deoplete-ternjs'
-on_ft = 'javascript'
-build = 'npm install -g tern'
-hook_post_source = '''
-" ToDO
-call deoplete#custom#source('TernJS', 'rank', 5000)
-'''
+# [[plugins]]
+# repo = 'carlitux/deoplete-ternjs'
+# on_ft = 'javascript'
+# build = 'npm install -g tern'
+# hook_post_source = '''
+# " ToDO
+# call deoplete#custom#source('TernJS', 'rank', 5000)
+# '''
 # linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
 
 [[plugins]]
@@ -278,14 +278,21 @@ on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 
 
 # commentary
-[[plugins]]
-repo = 'tpope/vim-commentary'
-on_cmd = ['Commentary', 'CommentaryLine']
-hook_add = '''
-" ToDo: instable setting, often to execute 'Commentary' directly at first.
-nmap <C-_> <Plug>CommentaryLine
-vmap <C-_> <Plug>Commentary
-'''
+# [[plugins]]
+# repo = 'tpope/vim-commentary'
+# on_cmd = ['Commentary', 'CommentaryLine']
+# hook_add = '''
+# nmap gcc <Plug>CommentaryLine
+# nmap <C-_> <Plug>CommentaryLine
+# vmap gc <Plug>Commentary
+# vmap <C-_> <Plug>Commentary
+# '''
+# [[plugins]]
+# repo = 'tyru/caw.vim'
+# hook_add = '''
+# nmap <C-_> gcc
+# xmap <C-_> gcc
+# '''
 
 # quick-run
 [[plugins]]
@@ -493,6 +500,33 @@ hook_add = '''
 
 [[plugins]]
 repo = 'tpope/vim-dispatch'
+
+
+## trailing-whitespace
+[[plugins]]
+repo = 'bronson/vim-trailing-whitespace'
+on_cmd = ['FixWhitespace']
+
+## bracket
+# [[plugins]]
+# repo = 'jiangmiao/auto-pairs'
+# on_event = 'InsertEnter'
+
+
+## visual expand
+# [[plugins]]
+# repo = 'terryma/vim-expand-region'
+# on_event = 'VisualEnter'
+# hook_add = '''
+# vmap v <Plug>(expand_region_expand)
+# vmap <C-v> <Plug>(expand_region_shrink)
+# '''
+
+## block
+# [[plugins]]
+# repo = 'tpope/vim-endwise'
+# on_event = 'InsertEnter'
+
 
 # Others ------
 
