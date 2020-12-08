@@ -16,13 +16,14 @@ if [ -d $HOME/.anyenv ]; then
     if [ -d $(anyenv root)/envs/nodenv ]; then
         eval "$(nodenv init -)"
     fi
+else
+    # pyenv
+    if [ -d $HOME/.pyenv ]; then
+        export PYENV_ROOT="$HOME/.pyenv"
+        export PATH="$PYENV_ROOT/bin:$PATH"
+        eval "$(pyenv init -)"
+        eval "$(pyenv virtualenv-init -)"
+        source $(pyenv root)/completions/pyenv.zsh
+    fi
 fi
 
-# pyenv
-if [ -d $HOME/.pyenv ]; then
-    export PYENV_ROOT="$HOME/.pyenv"
-    export PATH="$PYENV_ROOT/bin:$PATH"
-    eval "$(pyenv init -)"
-    eval "$(pyenv virtualenv-init -)"
-    source $(pyenv root)/completions/pyenv.zsh
-fi
