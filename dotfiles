@@ -1,0 +1,31 @@
+# Note: source from bash-script
+
+# ABSPATH of this file
+SCRIPT_DIR=$(cd $(dirname $0); pwd)
+
+# declare arrays
+declare -a TARGET_LIST=("tmux" "neovim" "zsh" "fish" "javascript")
+declare -A DEPLOY_SCRIPTS_PATH
+declare -A DEPLOY_SCRIPTS_OPTS
+
+# tmux
+DEPLOY_SCRIPTS_PATH["tmux"]=${SCRIPT_DIR}/tmux/sync.sh
+DEPLOY_SCRIPTS_OPTS["tmux"]="link"
+
+# neovim
+DEPLOY_SCRIPTS_PATH["neovim"]=${SCRIPT_DIR}/neovim/sync.sh
+DEPLOY_SCRIPTS_OPTS["neovim"]="link"
+
+# zsh
+DEPLOY_SCRIPTS_PATH["zsh"]=${SCRIPT_DIR}/shell/zsh/sync.sh
+DEPLOY_SCRIPTS_OPTS["zsh"]="link"
+
+# fish
+DEPLOY_SCRIPTS_PATH["fish"]=${SCRIPT_DIR}/shell/fish/config_fish/sync.sh
+DEPLOY_SCRIPTS_OPTS["fish"]="link"
+
+# javascript
+DEPLOY_SCRIPTS_PATH["javascript"]=${SCRIPT_DIR}/javascript/sync.sh
+DEPLOY_SCRIPTS_OPTS["javascript"]="link"
+
+# vim: set ft=bash ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :
