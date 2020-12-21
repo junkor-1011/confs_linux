@@ -9,6 +9,12 @@ confs linux
     - 現在は各項目毎に別々にスクリプトを叩いている
     - オプションなどで選んだ項目について全部同期出来るようにしたい
 
+
+ToDo:
+^^^^^^^
+
+- ``dotfiles`` と Tips集、Note類の整理と分離
+
 ---------
 
 Under Construction...

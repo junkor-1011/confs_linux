@@ -31,10 +31,15 @@ if [ "$1" = "deploy" ]; then
 elif [ "$1" = "import" ]; then
     rsync -auv ~/$FISH_CONFIG_PATH/ ./$FISH_CONFIG_PATH/
 elif [ "$1" = "link" ]; then
-    if [ -e ~/$FISH_CONFIG_PATH ]; then
+    # if [ -e ~/$FISH_CONFIG_PATH ]; then
+    #     # はじめからsymbolic linkで管理していることを前提
+    #     # 時間があったらファイルタイプに応じて処理を分岐させるかも
+    #     unlink ~/$FISH_CONFIG_PATH
+    # fi
+    if [ -d ~/$FISH_CONFIG_PATH ]; then
         # はじめからsymbolic linkで管理していることを前提
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
-        unlink ~/$FISH_CONFIG_PATH
+	mv ~/$FISH_CONFIG_PATH ~/${FISH_CONFIG_PATH}_bk_$(date '+%Y-%m-%dT%T')
     fi
     ln -s $(pwd)/$FISH_CONFIG_PATH ~/$FISH_CONFIG_PATH
 else
