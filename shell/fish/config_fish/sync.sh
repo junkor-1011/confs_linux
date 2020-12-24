@@ -40,9 +40,9 @@ elif [ "$1" = "link" ]; then
     if [ -d ~/$FISH_CONFIG_PATH ]; then
         # はじめからsymbolic linkで管理していることを前提
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
-	mv ~/$FISH_CONFIG_PATH ~/${FISH_CONFIG_PATH}_bk_$(date '+%Y-%m-%dT%T')
+        mv ~/$FISH_CONFIG_PATH ~/${FISH_CONFIG_PATH}_bk_$(date '+%Y-%m-%dT%T')
     fi
-    ln -s $(pwd)/$FISH_CONFIG_PATH ~/$FISH_CONFIG_PATH
+    ln -sfnv $(pwd)/$FISH_CONFIG_PATH ${HOME}/$FISH_CONFIG_PATH
 else
     echo "wrong argument \n"
     echo "$help"
