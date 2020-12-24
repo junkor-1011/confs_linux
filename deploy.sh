@@ -23,3 +23,5 @@ for target in ${TARGET_LIST[@]}; do
         echo "${target} does not have default config template."
     fi
 done
+
+echo "Finished: setting all dotfiles."
