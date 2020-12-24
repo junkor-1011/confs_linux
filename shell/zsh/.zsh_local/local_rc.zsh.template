@@ -57,3 +57,5 @@ else
     fi
 fi
 
+# modeline
+# vim: set ft=zsh ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :

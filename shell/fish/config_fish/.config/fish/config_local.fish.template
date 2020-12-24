@@ -64,19 +64,20 @@ else if test -d $HOME/.pyenv
 end
 
 # default editor
-if test -x /usr/bin/nvim
-    set -x EDITOR /usr/bin/nvim
-    alias vim='/usr/bin/nvim'
+# if test -x /usr/bin/nvim
+if type nvim > /dev/null 2>&1
+    set -x EDITOR (which nvim)
+    alias vim=(which nvim)
     alias vi='/usr/bin/vim'
 else
     set -x EDITOR /usr/bin/vim
 end
 
-## X11 ##
-set -x DISPLAY localhost:0.0
+## X11 for client machine ##
+# set -x DISPLAY localhost:0.0
 # for WSL2(need to set system & antivirus software's firewall)
 # set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-set -x LIBGL_ALWAYS_INDIRECT 1
+# set -x LIBGL_ALWAYS_INDIRECT 1
 
 
 # ### Docker for Windows in WSL ###
@@ -104,3 +105,5 @@ end
 # set -x PATH $HOME/bin:$PATH
 set -g fish_user_paths $HOME/bin $fish_user_paths
 
+# modeline
+# vim: set ft=fish ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :
