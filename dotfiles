@@ -35,6 +35,6 @@ DEPLOY_SCRIPTS_SET_DEFAULT["fish"]=""
 # javascript
 DEPLOY_SCRIPTS_PATH["javascript"]=${SCRIPT_DIR}/javascript/sync.sh
 DEPLOY_SCRIPTS_OPTS["javascript"]="link"
-DEPLOY_SCRIPTS_SET_DEFAULT["fish"]=""
+DEPLOY_SCRIPTS_SET_DEFAULT["javascript"]=""
 
 # vim: set ft=bash ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :
