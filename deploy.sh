@@ -18,7 +18,7 @@ for target in ${TARGET_LIST[@]}; do
     /bin/bash ${DEPLOY_SCRIPTS_PATH[$target]} ${DEPLOY_SCRIPTS_OPTS[$target]}
 
     if [ "${DEPLOY_SCRIPTS_SET_DEFAULT[$target]}" != "" ]; then
-        /bin/bash ${DEPLOY_SCRIPTS_SET_DEFAULT}
+        /bin/bash ${DEPLOY_SCRIPTS_SET_DEFAULT[$target]}
     else
         echo "${target} does not have default config template."
     fi
