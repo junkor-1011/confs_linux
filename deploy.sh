@@ -4,6 +4,11 @@ set -eu
 # get this script's path
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
 
+# $HOME/.config
+if [ ! -d $HOME/.config ]; then
+    mkdir -p $HOME/.config
+fi
+
 # source common settings
 source ${SCRIPT_DIR}/dotfiles
 
