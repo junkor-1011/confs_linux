@@ -1,4 +1,5 @@
 #!/bin/sh
+set -eu
 
 # 実行スクリプトのpath取得
 # https://qiita.com/koara-local/items/2d67c0964188bba39e29
@@ -36,7 +37,7 @@ elif [ "$1" = "link" ]; then
         # 時間があったらファイルタイプに応じて処理を分岐させるかも
         unlink ~/$NVIM_CONFIG_PATH
     fi
-    ln -s $(pwd)/$NVIM_CONFIG_PATH ~/$NVIM_CONFIG_PATH
+    ln -sfnv $(pwd)/$NVIM_CONFIG_PATH ~/$NVIM_CONFIG_PATH
 else
     echo "wrong argument \n"
     echo "$help"

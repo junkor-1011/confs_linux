@@ -5,3 +5,4 @@ let g:python3_host_prog = "$HOME/.anyenv/envs/pyenv/versions/miniconda3-latest/e
 " let $NODE_NVIM_BACKEND = "$HOME/LocalApps/nodejs/lib/node_modules/neovim/bin/cli.js"
 " let $NODE_NVIM_BACKEND = "$HOME/.pyenv/versions/miniconda3-latest/envs/nvim_backend/lib/node_modules/neovim/bin/cli.js"
 
+" vim: set ft=vim fileencoding=utf-8 expandtab ts=4 sw=4 :

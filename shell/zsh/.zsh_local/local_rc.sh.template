@@ -1,18 +1,19 @@
 
 # default editor
-if [ -x /usr/bin/nvim ]; then
-    export EDITOR=/usr/bin/nvim
-    alias vim='/usr/bin/nvim'
+# if [ -x /usr/bin/nvim ]; then
+if type nvim > /dev/null 2>&1; then
+    export EDITOR=$(which nvim)
+    alias vim=$(which nvim)
     alias vi='/usr/bin/vim'
 else
     export EDITOR=/usr/bin/vim
 fi
 
-## X11 ##
-export DISPLAY=localhost:0.0
+## X11 for client machine ##
+# export DISPLAY=localhost:0.0
 # for WSL2 (need to set system & antivirus software's firewall)
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-export LIBGL_ALWAYS_INDIRECT=1
+# export LIBGL_ALWAYS_INDIRECT=1
 
 
 # *** Docker for Windows in WSL ***
@@ -24,9 +25,11 @@ fi
 
 
 ## nodejs ##
-export NODEJS_HOME=$HOME/LocalApps/nodejs
-export PATH=$NODEJS_HOME/bin:$PATH
+# export NODEJS_HOME=$HOME/LocalApps/nodejs
+# export PATH=$NODEJS_HOME/bin:$PATH
 
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 
+# modeline
+# vim: set ft=sh ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :

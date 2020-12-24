@@ -8,24 +8,33 @@ declare -a TARGET_LIST=("tmux" "neovim" "zsh" "fish" "javascript")
 declare -A DEPLOY_SCRIPTS_PATH
 declare -A DEPLOY_SCRIPTS_OPTS
 
+# if exists, execute set-default scripts
+# (NO EXISTS: set "")
+declare -A DEPLOY_SCRIPTS_SET_DEFAULT
+
 # tmux
 DEPLOY_SCRIPTS_PATH["tmux"]=${SCRIPT_DIR}/tmux/sync.sh
 DEPLOY_SCRIPTS_OPTS["tmux"]="link"
+DEPLOY_SCRIPTS_SET_DEFAULT["tmux"]=""
 
 # neovim
 DEPLOY_SCRIPTS_PATH["neovim"]=${SCRIPT_DIR}/neovim/sync.sh
 DEPLOY_SCRIPTS_OPTS["neovim"]="link"
+DEPLOY_SCRIPTS_SET_DEFAULT["neovim"]=${SCRIPT_DIR}/neovim/set_default.sh
 
 # zsh
 DEPLOY_SCRIPTS_PATH["zsh"]=${SCRIPT_DIR}/shell/zsh/sync.sh
 DEPLOY_SCRIPTS_OPTS["zsh"]="link"
+DEPLOY_SCRIPTS_SET_DEFAULT["zsh"]=${SCRIPT_DIR}/shell/zsh/set_default.sh
 
 # fish
 DEPLOY_SCRIPTS_PATH["fish"]=${SCRIPT_DIR}/shell/fish/config_fish/sync.sh
 DEPLOY_SCRIPTS_OPTS["fish"]="link"
+DEPLOY_SCRIPTS_SET_DEFAULT["fish"]=${SCRIPT_DIR}/shell/fish/config_fish/set_default.sh
 
 # javascript
 DEPLOY_SCRIPTS_PATH["javascript"]=${SCRIPT_DIR}/javascript/sync.sh
 DEPLOY_SCRIPTS_OPTS["javascript"]="link"
+DEPLOY_SCRIPTS_SET_DEFAULT["javascript"]=""
 
 # vim: set ft=bash ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :

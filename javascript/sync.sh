@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
+set -eu
 
 # 実行スクリプトのpath取得
 # https://qiita.com/koara-local/items/2d67c0964188bba39e29
