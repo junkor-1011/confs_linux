@@ -1,4 +1,5 @@
 #!/bin/bash
+set -eu
 
 # get this script's path
 SCRIPT_DIR=$(cd $(dirname $0); pwd)
@@ -10,4 +11,8 @@ source ${SCRIPT_DIR}/dotfiles
 for target in ${TARGET_LIST[@]}; do
     echo $target
     /bin/bash ${DEPLOY_SCRIPTS_PATH[$target]} ${DEPLOY_SCRIPTS_OPTS[$target]}
+
+    if [ $DEPLOY_SCRIPTS_SET_DEFAULT != "" ]; then
+        /bin/bash ${DEPLOY_SCRIPTS_SET_DEFAULT}
+    fi
 done
