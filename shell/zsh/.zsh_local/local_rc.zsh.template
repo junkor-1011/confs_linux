@@ -57,5 +57,11 @@ else
     fi
 fi
 
+# aws-cli(ver2) completion
+if type aws_completer > /dev/null 2>&1; then
+    autoload bashcompinit && bashcompinit
+    complete -C "$(which aws_completer)" aws
+fi
+
 # modeline
 # vim: set ft=zsh ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :

@@ -63,6 +63,17 @@ else if test -d $HOME/.pyenv
     status --is-interactive; and pyenv virtualenv-init - | source
 end
 
+# aws-cli(ver2) completion
+if type aws_completer > /dev/null 2>&1
+    complete -c aws -f -a '(
+    begin
+        set -lx COMP_SHELL fish
+        set -lx COMP_LINE (commandline)
+        aws_completer
+    end
+    )'
+end
+
 # default editor
 # if test -x /usr/bin/nvim
 if type nvim > /dev/null 2>&1
