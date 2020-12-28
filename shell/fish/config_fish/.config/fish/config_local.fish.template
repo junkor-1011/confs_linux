@@ -89,6 +89,8 @@ end
 # for WSL2(need to set system & antivirus software's firewall)
 # set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 # set -x LIBGL_ALWAYS_INDIRECT 1
+alias set_x11local='set -x DISPLAY (cat /etc/resolv.conf | grep nameserver | awk \'{print $2}\'):0; set -x LIBGL_ALWAYS_INDIRECT 1'
+alias unset_x11local='set -e DISPLAY; set -e LIBGL_ALWAYS_INDIRECT'
 
 
 # ### Docker for Windows in WSL ###
