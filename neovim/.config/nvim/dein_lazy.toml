@@ -110,11 +110,11 @@ on_ft = 'zsh'
 
 [[plugins]]
 repo = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['typescript']
+on_ft = ['typescript', 'typescriptreact']
 
 [[plugins]]
 repo = 'ryanolsonx/vim-lsp-javascript'
-on_ft = ['javascript']
+on_ft = ['javascript', 'javascriptreact']
 
 
 # vim-lsp
@@ -201,6 +201,7 @@ on_ft = [
     'typescript',
     'typescriptreact',
     'javascript',
+    'javascriptreact',
     'c',
     'cpp',
     'sql',
