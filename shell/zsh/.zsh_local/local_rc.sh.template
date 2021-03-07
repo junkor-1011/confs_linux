@@ -30,6 +30,12 @@ fi
 # export NODEJS_HOME=$HOME/LocalApps/nodejs
 # export PATH=$NODEJS_HOME/bin:$PATH
 
+## deno ##
+if [ -d ${HOME}/.deno ]; then
+    export DENO_INSTALL="${HOME}/.deno"
+    export PATH="$DENO_INSTALL/bin:$PATH"
+fi
+
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 

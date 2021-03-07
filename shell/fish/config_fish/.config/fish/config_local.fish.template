@@ -108,6 +108,12 @@ alias unset_x11local='set -e DISPLAY; set -e LIBGL_ALWAYS_INDIRECT'
 #     set -g fish_user_paths $NODEJS_HOME/bin $fish_user_paths
 # end
 
+## deno ##
+if test -d $HOME/.deno
+    set -x DENO_INSTALL $HOME/.deno
+    set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
+end
+
 ## fzf
 if test -d $HOME/.fzf/bin
     set -g fish_user_paths $HOME/.fzf/bin $fish_user_paths
