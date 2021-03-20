@@ -13,18 +13,24 @@ nnoremap <Leader>m  :ALEList<CR>
 
 " linter
 let g:ale_linters = {
-    \ 'python': ['flake8', 'pylint', 'mypy'],
-    \ 'html': ['htmlhint'],
-    \ 'javascript': ['eslint'],
     \ 'css': ['stylelint'],
+    \ 'scss': ['stylelint'],
     \ }
+    " vim-lspを使うため、不要なものはコメントアウト
+    "\ 'python': ['flake8', 'pylint', 'mypy'],
+    "\ 'html': ['htmlhint'],
+    "\ 'javascript': ['eslint'],
 
 " fixer
 let g:ale_fixers = {
     \ 'python': ['autopep8', 'black', 'isort', 'yapf'],
     \ 'html': ['prettier'],
-    \ 'javascript': ['prettier-eslint'],
+    \ 'javascript': ['prettier', 'prettier-eslint'],
+    \ 'javascriptreact': ['prettier', 'prettier-eslint'],
+    \ 'typescript': ['prettier', 'prettier-eslint'],
+    \ 'typescriptreact': ['prettier', 'prettier-eslint'],
     \ 'css': ['prettier', 'stylelint'],
+    \ 'scss': ['prettier', 'stylelint'],
     \ }
 
 " Python
