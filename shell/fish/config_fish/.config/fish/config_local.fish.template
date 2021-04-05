@@ -114,6 +114,12 @@ if test -d $HOME/.deno
     set -g fish_user_paths $HOME/.deno/bin $fish_user_paths
 end
 
+## go ##
+if test -x /usr/local/go/bin/go
+    set -g fish_user_paths /usr/local/go/bin $fish_user_paths
+    set -x GOPATH $HOME/.go
+end
+
 ## fzf
 if test -d $HOME/.fzf/bin
     set -g fish_user_paths $HOME/.fzf/bin $fish_user_paths

@@ -36,6 +36,12 @@ if [ -d ${HOME}/.deno ]; then
     export PATH="$DENO_INSTALL/bin:$PATH"
 fi
 
+## Go ##
+if [ -x /usr/local/go/bin/go ]; then
+    export PATH=/usr/local/go/bin:${PATH}
+    export GOPATH=${HOME}/.go
+fi
+
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 
