@@ -115,7 +115,9 @@ if test -d $HOME/.deno
 end
 
 ## go ##
-if test -x /usr/local/go/bin/go
+if test (type go)
+    set -x GOPATH $HOME/.go
+else if test -x /usr/local/go/bin/go
     set -g fish_user_paths /usr/local/go/bin $fish_user_paths
     set -x GOPATH $HOME/.go
 end
