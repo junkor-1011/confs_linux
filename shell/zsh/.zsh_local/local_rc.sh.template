@@ -46,6 +46,11 @@ elif [ -x /usr/local/go/bin/go ]; then
     export GOPATH=${HOME}/.go
 fi
 
+## c++ for atcoder
+if [ -f ${HOME}/LocalApps/atcoder/cpp/include/bits/stdc++.h ]; then
+    export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:${HOME}/LocalApps/atcoder/cpp/include/
+fi
+
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 
