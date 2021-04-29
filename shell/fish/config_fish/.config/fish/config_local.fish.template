@@ -122,6 +122,11 @@ else if test -x /usr/local/go/bin/go
     set -x GOPATH $HOME/.go
 end
 
+## c++ for atcoder
+if test -f $HOME/LocalApps/atcoder/cpp/include/bits/stdc++.h
+    set -x CPLUS_INCLUDE_PATH $CPLUS_INCLUDE_PATH:$HOME/LocalApps/atcoder/cpp/include/
+end
+
 ## fzf
 if test -d $HOME/.fzf/bin
     set -g fish_user_paths $HOME/.fzf/bin $fish_user_paths
