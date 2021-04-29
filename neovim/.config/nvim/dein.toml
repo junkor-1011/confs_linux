@@ -205,3 +205,6 @@ repo = 'prabirshrestha/async.vim'
 # template
 [[plugins]]
 repo = 'mattn/sonictemplate-vim'
+hook_add = '''
+let g:sonictemplate_vim_template_dir = '$HOME/.config/nvim/plugins_dein/sonictemplate'
+'''
