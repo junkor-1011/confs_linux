@@ -37,7 +37,8 @@ if [ -d $HOME/.anyenv ]; then
 
     # pyenv
     if [ -d $(anyenv root)/envs/pyenv ]; then
-        eval "$(pyenv init -)"
+        # eval "$(pyenv init -)"
+        eval "$(pyenv init --path)"
         eval "$(pyenv virtualenv-init -)"
         source $(pyenv root)/completions/pyenv.zsh
     fi
