@@ -23,3 +23,19 @@ ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg_bold[green]%}✔"
 
 PROMPT=$'%(?..%F{red}%?%f · )%B%~%b$(gitprompt)\n%F{blue}❯%f%F{cyan}❯%f%F{green}❯%f '
 RPROMPT=''
+
+# switch PROMPT
+set_prompt_hostname(){
+    PROMPT=$'%(?..%F{red}%?%f · )%B[%n@%m %~]%b$(gitprompt)\n%F{blue}❯%f%F{cyan}❯%f%F{green}❯%f '
+}
+unset_prompt_hostname(){
+    PROMPT=$'%(?..%F{red}%?%f · )%B%~%b$(gitprompt)\n%F{blue}❯%f%F{cyan}❯%f%F{green}❯%f '
+}
+
+# switch RPROMPT
+set_rprompt_datetime(){
+    RPROMPT="%F{white} %D{%Y-%m-%dT%H:%M:%S} %f"    
+}
+unset_rprompt_datetime(){
+    RPROMPT=''
+}
