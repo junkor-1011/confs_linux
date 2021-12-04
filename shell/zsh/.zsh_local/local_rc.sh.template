@@ -8,6 +8,10 @@ if type nvim > /dev/null 2>&1; then
 else
     export EDITOR=/usr/bin/vim
 fi
+if [ -x ${HOME}/bin/nvim-nightly ]; then
+    alias nvim=${HOME}/bin/nvim-nightly
+    alias vim=${HOME}/bin/nvim-nightly
+fi
 
 ## X11 for client machine ##
 # export DISPLAY=localhost:0.0
