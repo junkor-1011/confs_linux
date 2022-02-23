@@ -50,7 +50,7 @@ bindkey -e  # Emacs
 
 # ---------------------------------- #
 # Plugins
-if ([ -d $HOME/.zinit ] && [ -f $HOME/.zsh_local/zinit_setting.zsh ]); then
+if ([ -d $HOME/.local/share/zinit/zinit.git ] && [ -f $HOME/.zsh_local/zinit_setting.zsh ]); then
     # using zinit
     source $HOME/.zsh_local/zinit_setting.zsh
 elif ([ -d $HOME/.zplug ] && [ -f $HOME/.zsh_local/zplug_setting.zsh ]); then
