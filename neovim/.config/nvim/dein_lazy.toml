@@ -108,13 +108,13 @@ on_ft = 'zsh'
 # '''
 # linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
 
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-typescript'
-on_ft = ['typescript', 'typescriptreact']
+# [[plugins]]
+# repo = 'ryanolsonx/vim-lsp-typescript'
+# on_ft = ['typescript', 'typescriptreact']
 
-[[plugins]]
-repo = 'ryanolsonx/vim-lsp-javascript'
-on_ft = ['javascript', 'javascriptreact']
+# [[plugins]]
+# repo = 'ryanolsonx/vim-lsp-javascript'
+# on_ft = ['javascript', 'javascriptreact']
 
 
 # vim-lsp
@@ -211,12 +211,13 @@ on_ft = [
     'vue',
     'sh',
     'bash',
+    'vim',
 ]
 depends = [
     'deoplete-vim-lsp',
     'vista.vim',
-    'vim-lsp-typescript',
-    'vim-lsp-javascript',
+    # 'vim-lsp-typescript',
+    # 'vim-lsp-javascript',
     'vim-lsp-settings',
     'vim-lsp-icons',
     'vim-lsp-snippets',
@@ -243,6 +244,9 @@ on_ft = [
     'sql',
     'vue',
     'sql',
+    'sh',
+    'bash',
+    'vim',
 ]
 hook_source = '''
 source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
@@ -395,7 +399,7 @@ source ~/.config/nvim/plugins_dein/vim-closetag.vim
 
 [[plugins]]
 repo = 'mattn/emmet-vim'
-on_ft = ['html', 'djangohtml', 'css', 'javascript', 'typescript', 'typescriptreact']
+on_ft = ['html', 'djangohtml', 'css', 'javascript', 'javascriptreact','typescript', 'typescriptreact']
 
 
 
