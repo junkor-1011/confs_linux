@@ -35,20 +35,20 @@ hook_source = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
 '''
 
-[[plugins]]
-repo = 'tbodt/deoplete-tabnine'
-on_event = 'InsertEnter'
-hook_post_update = '''
-if has('win32') || has('win64')
-  let cmd = 'powershell.exe ./install.ps1'
-else
-  let cmd = './install.sh'
-let g:dein#plugin.build = cmd
-'''
-hook_post_source = '''
-" ToDo
-call deoplete#custom#source('TN', 'rank', 120)
-'''
+# [[plugins]]
+# repo = 'tbodt/deoplete-tabnine'
+# on_event = 'InsertEnter'
+# hook_post_update = '''
+# if has('win32') || has('win64')
+#   let cmd = 'powershell.exe ./install.ps1'
+# else
+#   let cmd = './install.sh'
+# let g:dein#plugin.build = cmd
+# '''
+# hook_post_source = '''
+# " ToDo
+# call deoplete#custom#source('TN', 'rank', 120)
+# '''
 
 # [[plugins]]
 # repo = 'zchee/deoplete-jedi'
