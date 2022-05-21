@@ -29,6 +29,7 @@ if [ -x /usr/bin/wslsys ]; then
     alias docker="DOCKER_HOST=${DOCKER_HOST} docker"
 fi
 
+# type set_prompt_hostname > /dev/null 2>&1 && set_prompt_hostname
 
 ## nodejs ##
 # export NODEJS_HOME=$HOME/LocalApps/nodejs
