@@ -59,5 +59,11 @@ fi
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 
+if type sl > /dev/null 2>&1; then
+    alias sl='sl -e'
+fi
+# alias cdk='npx aws-cdk'
+# alias awslocal='aws --endpoint-url=http://localhost:4566 --profile=localstack'
+
 # modeline
 # vim: set ft=sh ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :
