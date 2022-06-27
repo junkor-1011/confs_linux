@@ -11,8 +11,8 @@ augroup LspEFM
   au!
   autocmd User lsp_setup call lsp#register_server({
       \ 'name': 'efm-langserver',
-      \ 'cmd': {server_info->['efm-langserver', '-c=$HOME/.config/efm-langserver/config.yaml']},
-      \ 'allowlist': ['vim', 'eruby', 'markdown', 'yaml'],
+      \ 'cmd': {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml']},
+      \ 'allowlist': ['sh', 'dockerfile', 'markdown', 'yaml'],
       \ })
 augroup END
 
