@@ -4,6 +4,10 @@ root-markers:
 lint-debounce: 1s
 
 tools: 
+  yaml-yamllint: &yaml-yamllint
+    lint-command: 'yamllint -f parsable -'
+    lint-stdin: true
+
   dockerfile-hadolint: &dockerfile-hadolint
     lint-command: 'hadolint'
     lint-formats:
@@ -22,6 +26,8 @@ tools:
     format-stdin: true
 
 languages:
+  yaml:
+    - <<: *yaml-yamllint
 
   dockerfile:
     - <<: *dockerfile-hadolint

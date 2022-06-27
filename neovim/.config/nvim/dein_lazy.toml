@@ -214,6 +214,7 @@ on_ft = [
     'zsh',
     'vim',
     'dockerfile',
+    'yaml',
 ]
 depends = [
     'deoplete-vim-lsp',
@@ -251,6 +252,7 @@ on_ft = [
     'zsh',
     'vim',
     'dockerfile',
+    'yaml',
 ]
 hook_source = '''
 source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
