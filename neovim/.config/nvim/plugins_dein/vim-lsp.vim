@@ -5,6 +5,17 @@ nnoremap <Leader>h :LspHover <CR>
 " let g:lsp_diagnostics_enabled = 0         " disable diagnostics support
 "
 let g:lsp_highlights_enabled = 0
+let g:lsp_diagnostics_echo_cursor = 1
+
+augroup LspEFM
+  au!
+  autocmd User lsp_setup call lsp#register_server({
+      \ 'name': 'efm-langserver',
+      \ 'cmd': {server_info->['efm-langserver', '-c=$HOME/.config/efm-langserver/config.yaml']},
+      \ 'allowlist': ['vim', 'eruby', 'markdown', 'yaml'],
+      \ })
+augroup END
+
 " let g:lsp_textprop_enabled = 0
 " let g:lsp_virtual_text_enabled = 0
 

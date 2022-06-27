@@ -211,7 +211,9 @@ on_ft = [
     'vue',
     'sh',
     'bash',
+    'zsh',
     'vim',
+    'dockerfile',
 ]
 depends = [
     'deoplete-vim-lsp',
@@ -246,7 +248,9 @@ on_ft = [
     'sql',
     'sh',
     'bash',
+    'zsh',
     'vim',
+    'dockerfile',
 ]
 hook_source = '''
 source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
