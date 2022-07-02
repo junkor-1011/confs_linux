@@ -204,6 +204,7 @@ on_ft = [
     'javascriptreact',
     'css',
     'scss',
+    'html',
     'c',
     'cc',
     'cpp',
@@ -215,6 +216,9 @@ on_ft = [
     'vim',
     'dockerfile',
     'yaml',
+    'json',
+    'rst',
+    'markdown',
 ]
 depends = [
     'deoplete-vim-lsp',
@@ -241,6 +245,7 @@ on_ft = [
     'javascriptreact',
     'css',
     'scss',
+    'html',
     'c',
     'cc',
     'cpp',
@@ -253,6 +258,9 @@ on_ft = [
     'vim',
     'dockerfile',
     'yaml',
+    'json',
+    'rst',
+    'markdown',
 ]
 hook_source = '''
 source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim

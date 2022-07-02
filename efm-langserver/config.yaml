@@ -4,9 +4,52 @@ root-markers:
 lint-debounce: 1s
 
 tools: 
+  vim-vint: &vim-vint
+    lint-command: 'vint -'
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l:%c: %m'
+
   yaml-yamllint: &yaml-yamllint
     lint-command: 'yamllint -f parsable -'
     lint-stdin: true
+
+  markdown-markdownlint: &markdown-markdownlint
+    lint-command: 'markdownlint -s'
+    lint-stdin: true
+    lint-formats:
+      - '%f:%l %m'
+      - '%f:%l:%c %m'
+      - '%f: %l: %m'
+
+  markdown-pandoc: &markdown-pandoc
+    format-command: 'pandoc -f markdown -t gfm -sp --tab-stop=2'
+
+  rst-pandoc: &rst-pandoc
+    format-command: 'pandoc -f rst -t rst -s --columns=79'
+
+  rst-lint: &rst-lint
+    lint-command: 'rst-lint'
+    lint-formats:
+      - '%tNFO %f:%l %m'
+      - '%tARNING %f:%l %m'
+      - '%tRROR %f:%l %m'
+      - '%tEVERE %f:%l %m'
+
+  html-prettier: &html-prettier
+    format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser html'
+
+  css-prettier: &css-prettier
+    format-command: 'prettier ${--tab-width:tabWidth} ${--single-quote:singleQuote} --parser css'
+
+  json-prettier: &json-prettier
+    format-command: 'prettier ${--tab-width:tabWidth} --parser json'
+
+  json-jq: &json-jq
+    lint-command: 'jq .'
+
+  json-fixjson: &json-fixjson
+    format-command: 'fixjson'
 
   dockerfile-hadolint: &dockerfile-hadolint
     lint-command: 'hadolint'
@@ -26,11 +69,33 @@ tools:
     format-stdin: true
 
 languages:
+  vim:
+    - <<: *vim-vint
+
   yaml:
     - <<: *yaml-yamllint
 
+  markdown:
+    - <<: *markdown-markdownlint
+    - <<: *markdown-pandoc
+
+  rst:
+    - <<: *rst-lint
+    - <<: *rst-pandoc
+
   dockerfile:
     - <<: *dockerfile-hadolint
+
+  html:
+    - <<: *html-prettier
+
+  css:
+    - <<: *css-prettier
+
+  json:
+    - <<: *json-jq
+    - <<: *json-fixjson
+    # - <<: *json-prettier
 
   sh:
     - <<: *sh-shellcheck
