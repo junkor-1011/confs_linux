@@ -68,6 +68,38 @@ tools:
     format-command: 'shfmt -i 4 -ci -s -bn'
     format-stdin: true
 
+  javascript-eslint: &javascript-eslint
+    lint-command: 'npx --no-install eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
+
+  javascriptreact-eslint: &javascriptreact-eslint
+    lint-command: 'npx --no-install eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
+
+  typescript-eslint: &typescript-eslint
+    lint-command: 'npx --no-install eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
+
+  typescriptreact-eslint: &typescriptreact-eslint
+    lint-command: 'npx --no-install eslint -f visualstudio --stdin --stdin-filename ${INPUT}'
+    lint-ignore-exit-code: true
+    lint-stdin: true
+    lint-formats:
+      - "%f(%l,%c): %tarning %m"
+      - "%f(%l,%c): %rror %m"
+
 languages:
   vim:
     - <<: *vim-vint
@@ -100,3 +132,15 @@ languages:
   sh:
     - <<: *sh-shellcheck
     - <<: *sh-shfmt
+
+  javascript:
+    - <<: *javascript-eslint
+
+  javascriptreact:
+    - <<: *javascript-eslint
+
+  typescript:
+    - <<: *typescript-eslint
+
+  typescriptreact:
+    - <<: *typescript-eslint
