@@ -88,6 +88,11 @@ if [ -f $HOME/.zsh_local/local_rc.sh ]; then
    source $HOME/.zsh_local/local_rc.sh
 fi
 
+if [ -d $HOME/.zsh_local/completions ]; then
+    fpath=(~/.zsh_local/completions $fpath)
+    autoload -Uz compinit
+    compinit -u
+fi
 
 # PATHの重複削除 (zsh)
 typeset -U path PATH
