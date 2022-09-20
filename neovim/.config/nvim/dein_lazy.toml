@@ -91,32 +91,6 @@ repo = 'deoplete-plugins/deoplete-zsh'
 on_ft = 'zsh'
 
 
-# Docker
-# [[plugins]]
-# repo = 'deoplete-plugins/deoplete-docker'
-# on_ft = 'Docker'
-
-# javascript
-# deoplete-vim-lspがあるが、ternjsの方が有効なこともまだ多そうな感じ
-# [[plugins]]
-# repo = 'carlitux/deoplete-ternjs'
-# on_ft = 'javascript'
-# build = 'npm install -g tern'
-# hook_post_source = '''
-# " ToDO
-# call deoplete#custom#source('TernJS', 'rank', 5000)
-# '''
-# linuxのシステムのnpmだとsudoが必要になるので予め入れておく?
-
-# [[plugins]]
-# repo = 'ryanolsonx/vim-lsp-typescript'
-# on_ft = ['typescript', 'typescriptreact']
-
-# [[plugins]]
-# repo = 'ryanolsonx/vim-lsp-javascript'
-# on_ft = ['javascript', 'javascriptreact']
-
-
 # vim-lsp
 [[plugins]]
 repo = 'lighttiger2505/deoplete-vim-lsp'
@@ -130,14 +104,6 @@ hook_post_source = '''
 call deoplete#custom#source('lsp', 'rank', 6000)
 '''
 
-
-# tabnine (AI)
-# [[plugins]]
-# repo = 'tbodt/deoplete-tabnine'
-# on_event = 'InsertEnter'
-# build = '''
-# ./install.sh
-# '''
 
 # DEBUG
 # うまく読み込まれていない様子
