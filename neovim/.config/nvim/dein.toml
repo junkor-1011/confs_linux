@@ -84,7 +84,7 @@ repo = 'tpope/vim-repeat'
 repo = 'tpope/vim-surround'
 
 
-# [[plugins]]
+[[plugins]]
 repo = 'tyru/caw.vim'
 hook_add = '''
 nmap <C-_> gcc
@@ -208,3 +208,7 @@ repo = 'mattn/sonictemplate-vim'
 hook_add = '''
 let g:sonictemplate_vim_template_dir = '$HOME/.config/nvim/plugins_dein/sonictemplate'
 '''
+
+# spellcheck
+[[plugins]]
+repo = 'kamykn/spelunker.vim'
