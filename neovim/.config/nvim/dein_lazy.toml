@@ -20,6 +20,32 @@ hook_source = '''
 source ~/.config/nvim/plugins_dein/defx.vim
 '''
 
+# Fern
+[[plugins]]
+repo = 'lambdalisue/fern.vim'
+depends = [
+    'fern-renderer-nerdfont.vim',
+    'fern-git-status.vim',
+    'fern-mapping-git.vim',
+    'nerdfont.vim',
+]
+on_cmd = 'Fern'
+
+[[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+hook_source = '''
+let g:fern#renderer = "nerdfont"
+'''
+
+[[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-mapping-git.vim'
+
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+
 # Deoplete
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
@@ -34,37 +60,6 @@ let g:deoplete#enable_at_startup = 1
 hook_source = '''
 source ~/.config/nvim/plugins_dein/deoplete.vim
 '''
-
-# [[plugins]]
-# repo = 'tbodt/deoplete-tabnine'
-# on_event = 'InsertEnter'
-# hook_post_update = '''
-# if has('win32') || has('win64')
-#   let cmd = 'powershell.exe ./install.ps1'
-# else
-#   let cmd = './install.sh'
-# let g:dein#plugin.build = cmd
-# '''
-# hook_post_source = '''
-# " ToDo
-# call deoplete#custom#source('TN', 'rank', 120)
-# '''
-
-# [[plugins]]
-# repo = 'zchee/deoplete-jedi'
-# on_ft = 'python'
-# hook_source = '''
-# let s:python3_project  = getenv("PYTHON3_PROJECT")
-# if s:python3_project != v:null
-#     let g:deoplete#sources#jedi#python_path = s:python3_project
-# endif
-# unlet s:python3_project
-# '''
-# hook_post_source = '''
-# " ToDo
-# call deoplete#custom#source('jedi', 'rank', 5000)
-# '''
-# hook_postでもうまく働いていない? vim起動時に直接実行するとうまく働く様子
 
 # pep8 indent
 [[plugins]]
@@ -272,23 +267,6 @@ on_ft = ['html', 'djangohtml', 'toml']
 repo = 'Shougo/context_filetype.vim'
 on_ft = ['html', 'djangohtml', 'markdown', 'toml', 'help']
 
-
-# commentary
-# [[plugins]]
-# repo = 'tpope/vim-commentary'
-# on_cmd = ['Commentary', 'CommentaryLine']
-# hook_add = '''
-# nmap gcc <Plug>CommentaryLine
-# nmap <C-_> <Plug>CommentaryLine
-# vmap gc <Plug>Commentary
-# vmap <C-_> <Plug>Commentary
-# '''
-# [[plugins]]
-# repo = 'tyru/caw.vim'
-# hook_add = '''
-# nmap <C-_> gcc
-# xmap <C-_> gcc
-# '''
 
 # quick-run
 [[plugins]]
