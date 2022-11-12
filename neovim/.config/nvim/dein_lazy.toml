@@ -30,6 +30,9 @@ depends = [
     'nerdfont.vim',
 ]
 on_cmd = 'Fern'
+hook_add = '''
+nnoremap <silent> <Leader>d :<C-u> Fern . -drawer -toggle <CR>
+'''
 
 [[plugins]]
 repo = 'lambdalisue/fern-renderer-nerdfont.vim'
