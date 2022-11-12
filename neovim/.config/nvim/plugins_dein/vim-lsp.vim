@@ -17,7 +17,7 @@ augroup LspEFM
   autocmd User lsp_setup call lsp#register_server({
       \ 'name': 'efm-langserver',
       \ 'cmd': {server_info->['efm-langserver', '-c='.$HOME.'/.config/efm-langserver/config.yaml']},
-      \ 'allowlist': ['vim', 'sh', 'dockerfile', 'markdown', 'rst', 'yaml', 'json', 'html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact'],
+      \ 'allowlist': ['vim', 'sh', 'dockerfile', 'markdown', 'rst', 'yaml', 'json', 'html', 'css', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'prisma'],
       \ })
 augroup END
 

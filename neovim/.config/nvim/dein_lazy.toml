@@ -54,9 +54,12 @@ repo = 'lambdalisue/nerdfont.vim'
 repo = 'Shougo/deoplete.nvim'
 if = "has('nvim')"
 build = ':UpdateRemotePlugins'
-depends = ['ultisnips']
+depends = [
+    'deoplete-vim-lsp',
+    'ultisnips',
+]
 # depends = ['neosnippet.vim']
-# on_event = 'InsertEnter'
+on_event = 'InsertEnter'
 hook_add = '''
 let g:deoplete#enable_at_startup = 1
 '''
@@ -157,83 +160,87 @@ depends = ['deoplete.nvim']
 
 
 # LSP
-[[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-on_ft = [
-    'python',
-    'go',
-    'rust',
-    'typescript',
-    'typescriptreact',
-    'javascript',
-    'javascriptreact',
-    'css',
-    'scss',
-    'html',
-    'c',
-    'cc',
-    'cpp',
-    'sql',
-    'vue',
-    'sh',
-    'bash',
-    'zsh',
-    'vim',
-    'dockerfile',
-    'yaml',
-    'json',
-    'rst',
-    'markdown',
-]
-depends = [
-    'deoplete-vim-lsp',
-    'vista.vim',
-    # 'vim-lsp-typescript',
-    # 'vim-lsp-javascript',
-    'vim-lsp-settings',
-    'vim-lsp-icons',
-    'vim-lsp-snippets',
-    'vim-lsp-ultisnips',
-]
-hook_source = '''
-source ~/.config/nvim/plugins_dein/vim-lsp.vim
-'''
+# [[plugins]]
+# repo = 'prabirshrestha/vim-lsp'
+# on_ft = [
+#     'python',
+#     'go',
+#     'rust',
+#     'typescript',
+#     'typescriptreact',
+#     'javascript',
+#     'javascriptreact',
+#     'css',
+#     'scss',
+#     'html',
+#     'c',
+#     'cc',
+#     'cpp',
+#     'sql',
+#     'vue',
+#     'sh',
+#     'bash',
+#     'zsh',
+#     'vim',
+#     'dockerfile',
+#     'yaml',
+#     'json',
+#     'rst',
+#     'markdown',
+# ]
+# depends = [
+#     'deoplete-vim-lsp',
+#     'vista.vim',
+#     # 'vim-lsp-typescript',
+#     # 'vim-lsp-javascript',
+#     'vim-lsp-settings',
+#     'vim-lsp-icons',
+#     'vim-lsp-snippets',
+#     'vim-lsp-ultisnips',
+# ]
+# hook_source = '''
+# source ~/.config/nvim/plugins_dein/vim-lsp.vim
+# '''
+
+# [[plugins]]
+# repo = 'mattn/vim-lsp-settings'
+# on_ft = [
+#     'python',
+#     'go',
+#     'rust',
+#     'typescript',
+#     'typescriptreact',
+#     'javascript',
+#     'javascriptreact',
+#     'css',
+#     'scss',
+#     'html',
+#     'c',
+#     'cc',
+#     'cpp',
+#     'sql',
+#     'vue',
+#     'sql',
+#     'sh',
+#     'bash',
+#     'zsh',
+#     'vim',
+#     'dockerfile',
+#     'yaml',
+#     'json',
+#     'rst',
+#     'markdown',
+# ]
+# hook_source = '''
+# source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
+# '''
+
+# [[plugins]]
+# repo = 'mattn/vim-lsp-icons'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
-on_ft = [
-    'python',
-    'go',
-    'rust',
-    'typescript',
-    'typescriptreact',
-    'javascript',
-    'javascriptreact',
-    'css',
-    'scss',
-    'html',
-    'c',
-    'cc',
-    'cpp',
-    'sql',
-    'vue',
-    'sql',
-    'sh',
-    'bash',
-    'zsh',
-    'vim',
-    'dockerfile',
-    'yaml',
-    'json',
-    'rst',
-    'markdown',
-]
-hook_source = '''
-source ~/.config/nvim/plugins_dein/vim-lsp-setting.vim
-'''
-
-[[plugins]]
-repo = 'mattn/vim-lsp-icons'
+repo = 'pantharshit00/vim-prisma'
+on_ft = 'prisma'
 
 # vista
 [[plugins]]
