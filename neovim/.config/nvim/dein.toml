@@ -179,3 +179,7 @@ let g:sonictemplate_vim_template_dir = '$HOME/.config/nvim/plugins_dein/sonictem
 # spellcheck
 [[plugins]]
 repo = 'kamykn/spelunker.vim'
+
+# prisma
+[[plugins]]
+repo = 'pantharshit00/vim-prisma'

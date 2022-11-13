@@ -238,10 +238,6 @@ depends = ['deoplete.nvim']
 # [[plugins]]
 # repo = 'mattn/vim-lsp-icons'
 
-[[plugins]]
-repo = 'pantharshit00/vim-prisma'
-on_ft = 'prisma'
-
 # vista
 [[plugins]]
 repo = 'liuchengxu/vista.vim'
