@@ -61,6 +61,9 @@ if [ -f ${HOME}/LocalApps/atcoder/cpp/include/bits/stdc++.h ]; then
     export CPLUS_INCLUDE_PATH=$CPLUS_INCLUDE_PATH:${HOME}/LocalApps/atcoder/cpp/include/
 fi
 
+## Pipenv
+export PIPENV_VENV_IN_PROJECT=true
+
 ## user-original ##
 export PATH=$HOME/bin:$PATH
 
