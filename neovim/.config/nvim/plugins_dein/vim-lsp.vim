@@ -11,8 +11,11 @@ let s:lsp_log_file_dir = $XDG_DATA_HOME.'/vim-lsp'
 if !isdirectory(s:lsp_log_file_dir)
   call mkdir(s:lsp_log_file_dir, 'p')
 endif
-let g:lsp_log_verbose = 1
 let g:lsp_log_file = expand(s:lsp_log_file_dir.'/vim-lsp.log')
+let g:lsp_log_verbose = 0
+
+" efm-langserver
+let $PATH = $PATH.':'.$HOME.'/go/bin:'.$XDG_DATA_HOME.'/vim-lsp-settings/servers/efm-langserver'
 
 let s:efm_log_file_dir = $XDG_DATA_HOME.'/efm-langserver'
 if !isdirectory(s:efm_log_file_dir)
