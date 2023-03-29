@@ -18,16 +18,16 @@ fi
 # for WSL2 (need to set system & antivirus software's firewall)
 # export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 # export LIBGL_ALWAYS_INDIRECT=1
-alias set_x11local="export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0; export LIBGL_ALWAYS_INDIRECT=1"
-alias unset_x11local="unset DISPLAY; unset LIBGL_ALWAYS_INDIRECT"
+# alias set_x11local="export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0; export LIBGL_ALWAYS_INDIRECT=1"
+# alias unset_x11local="unset DISPLAY; unset LIBGL_ALWAYS_INDIRECT"
 
 
 # *** Docker for Windows in WSL ***
 #export DOCKER_HOST=tcp://localhost:2375
-if [ -x /usr/bin/wslsys ]; then
-    export DOCKER_HOST=tcp://0.0.0.0:2375
-    alias docker="DOCKER_HOST=${DOCKER_HOST} docker"
-fi
+# if [ -x /usr/bin/wslsys ]; then
+#     export DOCKER_HOST=tcp://0.0.0.0:2375
+#     alias docker="DOCKER_HOST=${DOCKER_HOST} docker"
+# fi
 
 # type set_prompt_hostname > /dev/null 2>&1 && set_prompt_hostname
 
