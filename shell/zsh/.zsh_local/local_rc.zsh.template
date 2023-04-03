@@ -55,6 +55,9 @@ else
         eval "$(pyenv init -)"
         eval "$(pyenv virtualenv-init -)"
         source $(pyenv root)/completions/pyenv.zsh
+    elif [ -d "$HOME/LocalApps/Mambaforge" ]; then
+        source "$HOME/LocalApps/Mambaforge/etc/profile.d/conda.sh"
+        source "$HOME/LocalApps/Mambaforge/etc/profile.d/mamba.sh"
     fi
 fi
 
