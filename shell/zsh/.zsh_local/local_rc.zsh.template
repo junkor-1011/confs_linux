@@ -79,5 +79,10 @@ if type aws_completer > /dev/null 2>&1; then
     complete -C "$(which aws_completer)" aws
 fi
 
+# zoxide
+if type zoxide > /dev/null 2>&1; then
+    eval "$(zoxide init zsh)"
+fi
+
 # modeline
 # vim: set ft=zsh ff=unix fileencoding=utf-8 expandtab ts=4 sw=4 :

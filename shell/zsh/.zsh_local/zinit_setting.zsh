@@ -31,7 +31,8 @@ zinit load zsh-users/zsh-autosuggestions
 zinit load chrissicool/zsh-256color
 zinit load Tarrasch/zsh-bd
 # zinit load rupa/z, use:z.sh
-zinit load rupa/z
+# zinit load rupa/z
+# ^^^ use zoxide ^^^
 zinit load mollifier/cd-gitroot
 zinit load liangguohuan/zsh-dircolors-solarized
 zinit load woefe/git-prompt.zsh
